@@ -5,19 +5,21 @@
 }
 
 .titleWrapper {
-  text-align: center;
+  width: 90vw;
   align-self: flex-end;
+  text-align: end;
 }
 
 .linkWrapper {
-  align-self: self-start;
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .linkList {
   padding: 1em 0;
   margin: 0;
-  display: flex;
-  gap: 5vh;
   list-style: none;
 }
 
@@ -31,5 +33,5 @@
 }
 
 .subTitle {
-  font-size: 1.5em;
+  font-size: 2em;
 }

@@ -7,9 +7,17 @@
 }
 
 .button {
-  background: none;
+  background-color: var(--color-background);
   border: none;
   cursor: pointer;
+}
+
+.navigation {
+  margin: 0.3em 0;
+  background-color: var(--color-background);
+  box-shadow: var(--color-background) 0 2em 5em 0;
+  border: 0.01em solid var(--color);
+  border-radius: 0.3em;
 }
 
 .link-list {
@@ -18,16 +26,11 @@
   list-style: none;
   display: grid;
   justify-items: flex-end;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .link {
   text-decoration: none;
   padding: 0.3em;
   color: var(--color);
-}
-
-.link:hover {
-  background-color: violet;
-  color: black;
 }

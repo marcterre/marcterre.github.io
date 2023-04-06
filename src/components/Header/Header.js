@@ -19,7 +19,11 @@ export default function Header() {
           <ul className="link-list">
             {links.map((link) => (
               <li key={link.name} className="listItem">
-                <a href={link.link} className="link">
+                <a
+                  href={link.link}
+                  className="link"
+                  onClick={() => setOpenMenu(false)}
+                >
                   {link.name}
                 </a>
               </li>
@@ -30,7 +34,9 @@ export default function Header() {
       <button
         className="button"
         type="button"
-        onClick={() => setOpenMenu(!openMenu)}
+        onClick={() => {
+          setOpenMenu(!openMenu);
+        }}
       >
         {!openMenu ? (
           <SvgIcon variant="menu" width="30" color="var(--color)" />
