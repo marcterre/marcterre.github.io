@@ -13,7 +13,9 @@ export default function Header() {
         <ul className="link-list">
           {links.map((link) => (
             <li key={link.name} className="link-list-item">
-              <a href={link.link}>{link.name}</a>
+              <a href={link.link} className="link">
+                {link.name}
+              </a>
             </li>
           ))}
         </ul>
