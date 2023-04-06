@@ -18,7 +18,7 @@ export default function Header() {
         <nav className="navigation">
           <ul className="link-list">
             {links.map((link) => (
-              <li key={link.name}>
+              <li key={link.name} className="listItem">
                 <a href={link.link} className="link">
                   {link.name}
                 </a>
@@ -33,9 +33,9 @@ export default function Header() {
         onClick={() => setOpenMenu(!openMenu)}
       >
         {!openMenu ? (
-          <SvgIcon variant="menu" width="30" height="30" />
+          <SvgIcon variant="menu" width="30" color="var(--color)" />
         ) : (
-          <SvgIcon variant="menuOpen" width="30" height="30" />
+          <SvgIcon variant="menuOpen" width="30" color="var(--color)" />
         )}
       </button>
     </header>
