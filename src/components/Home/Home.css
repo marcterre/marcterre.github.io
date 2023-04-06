@@ -2,23 +2,19 @@
   height: 100vh;
   display: grid;
   justify-items: center;
-  align-items: center;
 }
 
 .titleWrapper {
-  margin: 0;
-  padding: 0;
   text-align: center;
+  align-self: flex-end;
 }
 
 .linkWrapper {
-  margin: 0;
-  padding: 0;
   align-self: self-start;
 }
 
 .linkList {
-  padding: 0;
+  padding: 1em 0;
   margin: 0;
   display: flex;
   gap: 5vh;
