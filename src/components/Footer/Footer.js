@@ -1,25 +1,26 @@
 import "./Footer.css";
 import SvgIcon from "../../SVGIcon";
 
+export const links = [
+  {
+    name: "linkedIn",
+    svg: <SvgIcon variant="linkedIn" width="40" height="50" />,
+    link: "https://www.linkedin.com/in/marcterre/",
+  },
+  {
+    name: "github",
+    svg: <SvgIcon variant="github" width="40" height="50" />,
+    link: "https://github.com/marcterre",
+  },
+];
+
 export default function Footer() {
-  const list = [
-    {
-      name: "linkedIn",
-      svg: <SvgIcon variant="linkedIn" width="40" height="50" />,
-      link: "https://www.linkedin.com/in/marcterre/",
-    },
-    {
-      name: "github",
-      svg: <SvgIcon variant="github" width="40" height="50" />,
-      link: "https://github.com/marcterre",
-    },
-  ];
   return (
-    <ul className="list">
+    <ul className="link">
       <li> follow me </li>
-      {list.map((listItem) => (
-        <li key={listItem.name}>
-          <a href={listItem.link}>{listItem.svg}</a>
+      {links.map((link) => (
+        <li key={link.name}>
+          <a href={link.link}>{link.svg}</a>
         </li>
       ))}
     </ul>

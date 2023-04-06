@@ -1,10 +1,24 @@
+.header {
+  display: flex;
+  position: fixed;
+  align-items: flex-start;
+  right: 2vw;
+  top: 2vw;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .link-list {
   margin: 0;
-  padding: 1em 2em 0 0;
+  padding: 0.5em;
   list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 5vw;
+  display: grid;
+  justify-items: flex-end;
+  gap: 1em;
 }
 
 .link {
