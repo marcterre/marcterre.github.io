@@ -3,7 +3,7 @@ import { links } from "../Footer/Footer";
 
 export default function Home() {
   return (
-    <main className="main" id="home">
+    <div className="home" id="home">
       <div className="titleWrapper">
         <h1 className="heading title">Marc Terre</h1>
         <h2 className="heading subTitle">Web Developer</h2>
@@ -17,6 +17,6 @@ export default function Home() {
           ))}
         </ul>
       </div>
-    </main>
+    </div>
   );
 }
