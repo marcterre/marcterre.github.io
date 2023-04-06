@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="heading title">Marc Terre</h1>
         <h2 className="heading subTitle">Web Developer</h2>
       </div>
-      <div>
+      <div className="linkWrapper">
         <ul className="linkList">
           {links.map((link) => (
             <li key={link.name}>

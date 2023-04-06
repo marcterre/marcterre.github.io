@@ -7,12 +7,19 @@
 
 .titleWrapper {
   margin: 0;
-  padding: 2em;
-  display: grid;
-  justify-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+.linkWrapper {
+  margin: 0;
+  padding: 0;
+  align-self: self-start;
 }
 
 .linkList {
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 5vh;
   list-style: none;
