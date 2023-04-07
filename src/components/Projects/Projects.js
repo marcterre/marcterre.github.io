@@ -10,6 +10,7 @@ export default function Projects() {
       name: "PocketBuilder",
       description:
         "This app is especially designed for all hobbyists and craftsmen who want to plan new projects and retrieve them at any time",
+      image: "../../../assets/pocketBuilderImage.png",
       techStack: [
         "Next.js",
         "React",
@@ -40,6 +41,12 @@ export default function Projects() {
                 {finishedProjects.map((project) => (
                   <li key={project.name} className="project-list-item">
                     <h4>{project.name}</h4>
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      width="50"
+                      height="50"
+                    ></img>
                     <button
                       type="button"
                       onClick={() => setShowDescription(!showDescription)}
@@ -50,10 +57,10 @@ export default function Projects() {
                     </button>
                     {showDescription && <p>{project.description}</p>}
                     <div className="link-wrapper">
-                      <a className="link" href={project.codeLink}>
+                      <a className="project-link link" href={project.codeLink}>
                         code
                       </a>
-                      <a className="link" href={project.preview}>
+                      <a className="project-link link" href={project.preview}>
                         preview
                       </a>
                     </div>

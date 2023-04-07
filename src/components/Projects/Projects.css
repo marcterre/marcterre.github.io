@@ -19,11 +19,12 @@ h4 {
 }
 
 .link-wrapper {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  justify-items: start;
+  gap: 0.8em;
+  padding: 1em 0;
 }
 
-.link {
+.project-link {
   padding: 0.5em 1em;
-  border: 0.01em solid var(--color);
 }
