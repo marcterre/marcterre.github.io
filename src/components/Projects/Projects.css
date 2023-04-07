@@ -1,3 +1,29 @@
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
 .projects {
   height: 100vh;
+}
+
+.project-wrapper {
+  margin: 1em;
+  display: grid;
+  border: 0.1em solid var(--color);
+}
+
+.project-list {
+  padding: 0 1em;
+  list-style: none;
+}
+
+.link-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link {
+  padding: 0.5em 1em;
+  border: 0.01em solid var(--color);
 }
