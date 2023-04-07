@@ -1,6 +1,7 @@
 :root {
   --color-background: rgb(1, 1, 31);
   --color: rgb(209, 247, 255);
+  --color-cyber-pink: #ff2a6d;
   --font-dotGothic: "DotGothic16";
   --font-robotoCondensed: "Roboto Condensed";
 }
@@ -21,4 +22,9 @@ html {
   src: local("RobotCondensed"),
     url("./fonts/RobotoCondensed/roboto-condensed-v25-latin-regular.ttf")
       format("truetype");
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color);
 }
