@@ -1,6 +1,7 @@
 :root {
   --color-background: rgb(1, 1, 31);
-  --color: rgb(209, 247, 255);
+  /* --color: rgb(209, 247, 255); */
+  --color: white;
   --font-dotGothic: "DotGothic16";
   --font-robotoCondensed: "Roboto Condensed";
 }
