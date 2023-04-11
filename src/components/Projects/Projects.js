@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CapstoneImage from "../../assets/pocketBuilderImage.png"
 import "./Projects.css";
 
 export default function Projects() {
@@ -10,7 +11,7 @@ export default function Projects() {
       name: "PocketBuilder",
       description:
         "This app is especially designed for all hobbyists and craftsmen who want to plan new projects and retrieve them at any time",
-      image: "../../../assets/pocketBuilderImage.png",
+      image: CapstoneImage,
       techStack: [
         "Next.js",
         "React",
@@ -44,9 +45,11 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={project.name}
-                      width="50"
-                      height="50"
+                      width="100"
+                      height="auto"
+                      className="project-image"
                     ></img>
+                    <div className="button-link-wrapper" >
                     <button
                       type="button"
                       onClick={() => setShowDescription(!showDescription)}
@@ -55,15 +58,15 @@ export default function Projects() {
                         ? "hide description"
                         : "read description"}
                     </button>
-                    {showDescription && <p>{project.description}</p>}
                     <div className="link-wrapper">
-                      <a className="project-link link" href={project.codeLink}>
-                        code
-                      </a>
+                     <a className="project-link link" href={project.codeLink}>
+                       View the code on github</a>
                       <a className="project-link link" href={project.preview}>
-                        preview
+                        View the preview in vercel
                       </a>
+                      </div>
                     </div>
+                    {showDescription && <p className="project-description" >{project.description}</p>}
                   </li>
                 ))}
               </ul>
