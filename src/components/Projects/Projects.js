@@ -10,7 +10,7 @@ export default function Projects() {
     {
       name: "PocketBuilder",
       description:
-        "This app is especially designed for all hobbyists and craftsmen who want to plan new projects and retrieve them at any time",
+        "This app is especially designed for all hobbyists and craftsmen who want to plan new projects and retrieve them at any time.",
       image: CapstoneImage,
       techStack: [
         "Next.js",
@@ -42,13 +42,11 @@ export default function Projects() {
                 {finishedProjects.map((project) => (
                   <li key={project.name} className="project-list-item">
                     <h4>{project.name}</h4>
-                    <img
+                    <div className="image-wrapper" ><img
                       src={project.image}
-                      alt={project.name}
-                      width="100"
-                      height="auto"
+                      alt="Not added yet"
                       className="project-image"
-                    ></img>
+                    ></img></div>
                     <div className="button-link-wrapper" >
                     <button
                       type="button"
