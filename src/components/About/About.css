@@ -1,6 +1,6 @@
 .about {
   height: 100vh;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .tech-list {
@@ -22,7 +22,7 @@
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template: auto / repeat(2, 1fr);
+  grid-template: auto / repeat(4, 1fr);
   justify-items: center;
   gap: 1em;
 }
