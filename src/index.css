@@ -1,6 +1,8 @@
 :root {
-  --color-background: rgb(1, 1, 31);
-  --color: rgb(209, 247, 255);
+  --color-background: #01011F;
+  --color-background-transparent: rgb(1, 1, 31, 0.85) ;
+  --color-tags: rgb(255, 113, 250, 0.5);
+  --color: #F0F0F0;
   --color-cyber-pink: #ff2a6d;
   --font-dotGothic: "DotGothic16";
   --font-robotoCondensed: "Roboto Condensed";
@@ -25,6 +27,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   background-color: var(--color-background);
   color: var(--color);
 }

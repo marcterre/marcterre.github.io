@@ -1,8 +1,8 @@
 h4 {
   padding: 0 0 0.5em 0;
   margin: 0;
-  grid-column: 1/ span 2;
   font-size: 1.1em;
+  grid-column: 1 / span 2;
 }
 
 .projects {
@@ -16,14 +16,15 @@ h4 {
 }
 
 .project-description{
-  display: grid;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  background-color: var(--color-background);
-  margin: 0;
-  justify-items: center;
+  display: flex;
   align-items: center;
-  padding: 0 0.5em;
+  position: absolute;
+  background-color: var(--color-background-transparent);
+  margin: 0;
+  padding: 1em 0.8em;
+width: 50vw;
+height: 50vh;
+text-align: center;
 }
 
 .project-list {
@@ -34,43 +35,59 @@ h4 {
 
 .project-list-item {
   display: grid;
-  grid-template: auto / repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
 }
 
 .button-link-wrapper{
   display: grid;
-  padding: 1em;
+  gap: 0.3em;
+  grid-column: 1 / span 2;
+  padding: 1em 0;
   align-items: center;
-  justify-items: center;
-}
-
-.link-wrapper {
-  display: grid;
-  gap: 1.5em;
-text-align: center;
+  justify-items: flex-start;
+  text-align: center;
 }
 
 .project-link {
   padding: 0;
-}
-
-.project-link:active{
-  text-decoration: solid;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .project-image {
-
-width: 30vw;
+width: 50vw;
 }
 
 .image-wrapper{
-  grid-column-start: 1;
-grid-row-start: 2;
+  overflow: auto;
   padding: 0.5em 0;
 width: 100%;
-background-color: white;
+background-color: var(--color
+);
 display: grid;
 justify-items: center;
+align-items: center;
 border-radius: 0.3em;
 object-fit: cover;
 }
+
+
+.project-tech-list {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  font-size: 0.9em;
+  padding: 1em;
+align-items: center;
+justify-items: center;
+text-align: center;
+}
+
+.project-tech-list-item {
+  width: 20vw;
+  padding: 0.5em;
+  background-color: var(--color-tags);
+  border-radius: 2em;
+}
+
