@@ -1325,7 +1325,7 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.43.0.tgz#559ca3d9ddbd6bf907ad524320a0d14b85586af0"
   integrity sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==
 
-"@fullpage/react-fullpage@^0.1.38":
+"@fullpage/react-fullpage@^0.1.40":
   version "0.1.40"
   resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.40.tgz#09d5b9965f6ff60b30787f0d2c5956722a4924e4"
   integrity sha512-wmId7EXRx07iTDqXVRkYyv9WAkHN2Sropke89S7sv13/gMAV2KtaBoWVXMIDnsLIHPx05w9n3TOrHk572plGRQ==
