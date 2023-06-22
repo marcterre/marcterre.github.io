@@ -1,4 +1,4 @@
-import "./ContactSection.styles.css";
+import "./ContactSection.styles.scss";
 
 export const ContactSection = () => {
 	return (

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
+import "./index.styles.scss";
 import "./fonts/DotGothic/dotgothic16-v15-latin-regular.ttf";
 import "./fonts/RobotoCondensed/roboto-condensed-v25-latin-regular.ttf";
 

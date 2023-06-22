@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@tsconfig/create-react-app": "^1.0.3",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "sass": "^1.63.6"
   }
 }
