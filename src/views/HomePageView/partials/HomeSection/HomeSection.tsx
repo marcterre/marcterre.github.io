@@ -1,5 +1,7 @@
+import { HeaderSection } from "../HeaderSection";
+
 export const HomeSection = () => {
-  return <></>;
+  return <HeaderSection />;
 };
 
 export default HomeSection;

@@ -1,20 +1,29 @@
+import "./Navigation.styles.scss";
+
 type NavigationProps = {
-  listItems: {
+  navigationItems: {
     label?: string;
-    route?: string;
+    route: string;
   }[];
+  variant?: string;
 };
 
 export const Navigation = (props: NavigationProps) => {
-  const { listItems } = props;
+  const { navigationItems, variant } = props;
   return (
-    <nav>
-      {listItems.map((items, index) => (
-        <li key={index}>
-          <a href={items.route}>{items.label}</a>
-        </li>
-      ))}
-    </nav>
+    <div
+      className={`navigation-wrapper navigation-wrapper--${
+        variant ? variant : ""
+      }`}
+    >
+      <nav className={`navigation navigation--${variant ? variant : ""}`}>
+        {navigationItems.map((items, index) => (
+          <li key={index}>
+            <a href={items.route}>{items.label}</a>
+          </li>
+        ))}
+      </nav>
+    </div>
   );
 };
 

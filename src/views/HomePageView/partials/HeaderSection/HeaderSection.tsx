@@ -4,12 +4,23 @@ import "./HeaderSection.styles.scss";
 export const HeaderSection = () => {
   const navigationItems = [
     {
-      label: "",
+      label: "Projects",
+      route: "#projects",
+    },
+    {
+      label: "About me",
+      route: "#about",
+    },
+    {
+      label: "Contact",
+      route: "#contact",
     },
   ];
   return (
-    <header className="header">
-      <Navigation listItems={navigationItems} />
+    <header className="header-section">
+      <div className="header-section-navigation-container">
+        <Navigation variant="home-section" navigationItems={navigationItems} />
+      </div>
     </header>
   );
 };
