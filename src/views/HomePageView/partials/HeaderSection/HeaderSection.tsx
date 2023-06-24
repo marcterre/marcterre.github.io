@@ -1,7 +1,17 @@
+import { Navigation } from "../../../../components/Navigation";
 import "./HeaderSection.styles.scss";
 
 export const HeaderSection = () => {
-  return <header className="header"></header>;
+  const navigationItems = [
+    {
+      label: "",
+    },
+  ];
+  return (
+    <header className="header">
+      <Navigation listItems={navigationItems} />
+    </header>
+  );
 };
 
 export default HeaderSection;
