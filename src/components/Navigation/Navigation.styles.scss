@@ -1,25 +1,25 @@
 .navigation-wrapper {
-  width: 100vw;
   display: flex;
   justify-content: center;
+  height: 100%;
   .navigation {
     a {
       text-decoration: none;
-      color: black;
-      font-weight: 800;
+      color: var(--color-white);
+      font-weight: 300;
       text-transform: uppercase;
     }
     &--home-section {
-      position: relative;
-      top: 1rem;
+      margin-top: 1.5rem;
       list-style: none;
-      background-color: var(--color-dark-pink);
+      background-color: var(--color-dark-pink-80);
       display: flex;
       justify-content: space-evenly;
       border-radius: 50px;
-      width: 90vw;
-      padding: 0.3rem;
-      font-size: 0.8rem;
+      width: 90%;
+      padding: 1rem;
+      font-size: 0.7rem;
+      font-family: "ZenDots";
     }
   }
 }

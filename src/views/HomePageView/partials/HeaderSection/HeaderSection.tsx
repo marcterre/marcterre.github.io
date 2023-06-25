@@ -17,9 +17,15 @@ export const HeaderSection = () => {
     },
   ];
   return (
-    <header className="header-section">
+    <header>
       <div className="header-section-navigation-container">
         <Navigation variant="home-section" navigationItems={navigationItems} />
+        <div className="header-section-slogan">
+          <p className="slogan">
+            Transforming <span className="slogan--span">designs</span> into{" "}
+            engaging <span className="slogan--span">experience</span>
+          </p>
+        </div>
       </div>
     </header>
   );

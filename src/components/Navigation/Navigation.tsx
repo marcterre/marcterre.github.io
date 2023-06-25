@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import "./Navigation.styles.scss";
 
 type NavigationProps = {
   navigationItems: {
-    label?: string;
+    label?: string | ReactElement;
     route: string;
   }[];
   variant?: string;
