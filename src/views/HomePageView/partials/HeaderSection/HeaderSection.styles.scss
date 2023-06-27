@@ -9,10 +9,11 @@
     display: flex;
     justify-content: center;
     .slogan {
-      width: 90%;
+      width: 88%;
       padding: 1rem;
       margin: 0;
       font-size: 3.5rem;
+      text-align: justify;
       font-family: "ZenDots";
       color: var(--color-white);
       &--span {
