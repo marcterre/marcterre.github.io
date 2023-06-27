@@ -7,12 +7,6 @@
     display: flex;
     flex: 1 0 auto;
 
-    .home-section-image {
-      position: relative;
-      left: 1.5rem;
-      bottom: 1.5rem;
-      width: 410px;
-    }
     .home-section-description {
       flex: 1 1 auto;
       width: 55vw;
@@ -25,13 +19,6 @@
 @media only screen and (max-width: 600px) {
   .home-section {
     .home-section-descripton-container {
-      .home-section-image {
-        width: 150px;
-        position: absolute;
-        left: 0;
-        bottom: 1rem;
-        padding: 0.5rem 0 0 1rem;
-      }
       .home-section-description {
         flex: 1 0 auto;
         padding: 2rem;
@@ -44,13 +31,6 @@
   .home-section {
     .home-section-descripton-container {
       flex-direction: row-reverse;
-      .home-section-image {
-        width: 250px;
-        position: absolute;
-        left: 0;
-        bottom: 2rem;
-        padding: 0.5rem 0 0 1rem;
-      }
       .home-section-description {
         width: 40%;
         padding: 7rem 5rem;

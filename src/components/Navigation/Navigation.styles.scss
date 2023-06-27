@@ -8,18 +8,24 @@
       color: var(--color-white);
       font-weight: 300;
       text-transform: uppercase;
+      &:hover {
+        background-color: var(--color-dark-pink-80);
+      }
     }
     &--home-section {
       margin-top: 1.5rem;
       list-style: none;
-      background-color: var(--color-dark-pink-80);
+      border-bottom: 3px solid var(--color-dark-pink-80);
+      // background-color: var(--color-dark-pink-80);
       display: flex;
       justify-content: space-evenly;
-      border-radius: 50px;
       width: 90%;
-      padding: 1rem;
+      padding: 0.5rem 1rem;
       font-size: 0.7rem;
       font-family: "ZenDots";
+      &:hover {
+        box-shadow: 1px var(--color-dark-pink-80);
+      }
     }
   }
 }

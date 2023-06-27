@@ -22,7 +22,7 @@ export const HeaderSection = () => {
         <Navigation variant="home-section" navigationItems={navigationItems} />
         <div className="header-section-slogan">
           <p className="slogan">
-            Transforming <span className="slogan--span">designs</span> into{" "}
+            Transforming <span className="slogan--span">design</span>s into{" "}
             engaging <span className="slogan--span">experience</span>
           </p>
         </div>
