@@ -8,6 +8,11 @@ export const HomePageView = () => {
     <div className="home-section">
       <HeaderSection />
       <div className="home-section-descripton-container">
+        <img
+          className="home-section-image"
+          src={image}
+          alt="helmet-placeholder"
+        />
         <div className="home-section-description">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
