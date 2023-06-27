@@ -15,12 +15,12 @@ export const HomePageView = () => {
             quidem suscipit recusandae aspernatur nam adipisci? Magni maiores
             quo fuga incidunt eius.
           </p>
-          <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-            consequuntur neque, magnam aut, libero commodi laborum, optio culpa
-            quidem suscipit recusandae aspernatur nam adipisci? Magni maiores
-            quo fuga incidunt eius.
-          </div>
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+          consequuntur neque, magnam aut, libero commodi laborum, optio culpa
+          quidem suscipit recusandae aspernatur nam adipisci? Magni maiores quo
+          fuga incidunt eius.
         </div>
       </div>
     </div>
