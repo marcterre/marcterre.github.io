@@ -24,12 +24,11 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .header-section {
-    .header-section-navigation-container {
-    }
+  .header-section-navigation-container {
+    padding: 0.5rem;
     .header-section-slogan {
       .slogan {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
   }
