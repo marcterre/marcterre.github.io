@@ -1,0 +1,31 @@
+.navigation-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  .navigation {
+    a {
+      text-decoration: none;
+      color: var(--color-white);
+      font-weight: 300;
+      text-transform: uppercase;
+      &:hover {
+        background-color: var(--color-dark-pink-80);
+      }
+    }
+    &--home-section {
+      margin-top: 1.5rem;
+      list-style: none;
+      border-bottom: 3px solid var(--color-dark-pink-80);
+      // background-color: var(--color-dark-pink-80);
+      display: flex;
+      justify-content: space-evenly;
+      width: 90%;
+      padding: 0.5rem 1rem;
+      font-size: 0.7rem;
+      font-family: "ZenDots";
+      &:hover {
+        box-shadow: 1px var(--color-dark-pink-80);
+      }
+    }
+  }
+}
