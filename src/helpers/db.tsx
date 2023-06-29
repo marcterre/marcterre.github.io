@@ -1,7 +1,7 @@
 import mongoose, { model, models, Schema } from "mongoose";
 import crypto from "crypto";
 
-const URI = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.pjgtprn.mongodb.net/?retryWrites=true&w=majority`;
+const URI = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
 
 const projectSchema = new Schema({
   id: String,
@@ -13,8 +13,25 @@ const projectSchema = new Schema({
 const Project = models.Project || model("Project", projectSchema);
 
 async function connectDatabase() {
-  await mongoose.connect(URI);
+  try {
+    await mongoose.connect(URI);
+    console.log("Connected to MongoDB Atlas!");
+  } catch (error) {
+    console.error("Error connecting to MongoDB Atlas:", error);
+  }
 }
+
+connectDatabase()
+  .then(() => {
+    // Perform operations that require a database connection here
+    // ...
+    // For example:
+    // const result = await MyModel.find();
+    // console.log(result);
+  })
+  .catch((error) => {
+    console.error("Failed to connect to MongoDB Atlas:", error);
+  });
 
 async function getAllProjects() {
   await connectDatabase();
@@ -46,12 +63,7 @@ async function createProject(project: string[]) {
 async function updateProject(id: string, project: string) {
   await connectDatabase();
 
-  await Project.updateOne(
-    {
-      id,
-    },
-    project
-  );
+  await Project.updateOne({ _id: id }, { $set: { project } });
 
   const updatedProject = getProject(id);
 
