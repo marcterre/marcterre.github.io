@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import "./Navigation.styles.scss";
+import React from "react";
 
 type NavigationProps = {
   navigationItems: {

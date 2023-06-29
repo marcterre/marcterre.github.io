@@ -24,7 +24,7 @@ async function connectDatabase() {
 
 connectDatabase()
   .then(async () => {
-    const result = await Project.find();
+    const result = await Project.find().exec();
     console.log(result);
   })
   .catch((error) => {
