@@ -1,17 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./index.styles.scss";
-import "./fonts/DotGothic/dotgothic16-v15-latin-regular.ttf";
-import "./fonts/RobotoCondensed/roboto-condensed-v25-latin-regular.ttf";
+import "./assets/fonts/Zen-Dots/ZenDots.woff2";
 
-const root = document.getElementById("root");
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  root
+  </React.StrictMode>
 );
 
 reportWebVitals();

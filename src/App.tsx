@@ -1,14 +1,10 @@
-import { HeaderSection, ProjectSection } from "./views/HomePageView";
-import { FooterSection } from "./views/HomePageView";
+import React from "react";
+import { HomePageView } from "./views/HomePageView";
+import "./App.styles.scss";
 
 function App() {
-  return (
-    <>
-      <HeaderSection />
-      <ProjectSection />
-      <FooterSection />
-    </>
-  );
+  console.log(process.env.MONGO_DB_URL);
+  return <HomePageView />;
 }
 
 export default App;
