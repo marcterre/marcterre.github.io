@@ -1,5 +1,6 @@
 import mongoose, { model, models, Schema } from "mongoose";
 import crypto from "crypto";
+import "dotenv/config";
 
 const URI = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -22,12 +23,9 @@ async function connectDatabase() {
 }
 
 connectDatabase()
-  .then(() => {
-    // Perform operations that require a database connection here
-    // ...
-    // For example:
-    // const result = await MyModel.find();
-    // console.log(result);
+  .then(async () => {
+    const result = await Project.find();
+    console.log(result);
   })
   .catch((error) => {
     console.error("Failed to connect to MongoDB Atlas:", error);
