@@ -1,10 +1,9 @@
 import React from "react";
-import { HomePageView } from "./views/HomePageView";
 import "./App.styles.scss";
+import { RoutesContext } from "./routes/RoutesContext";
 
-function App() {
-  console.log(process.env.MONGO_DB_URL);
-  return <HomePageView />;
-}
+export const App = () => {
+  return <RoutesContext />;
+};
 
 export default App;
