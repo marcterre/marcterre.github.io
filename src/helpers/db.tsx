@@ -1,8 +1,7 @@
 import mongoose, { model, models, Schema } from "mongoose";
-import crypto from "crypto";
-import "dotenv/config";
+import { v4 as uuidv4 } from "uuid";
 
-const URI = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
+const URI = `mongodb+srv://${process.env.REACT_APP_MONGO_DB_USER}:${process.env.REACT_APP_MONGO_DB_PASSWORD}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
 
 const projectSchema = new Schema({
   id: String,
@@ -52,7 +51,7 @@ async function createProject(project: string[]) {
 
   const createdProject = await Project.create({
     ...project,
-    id: crypto.randomUUID(),
+    id: uuidv4(),
   });
 
   return createdProject;

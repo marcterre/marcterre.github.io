@@ -8,6 +8,6 @@
     "skipLibCheck": true,
     "jsx": "react-jsxdev"
   },
-  "include": ["**/*.ts", "src/helpers/db.tsx"],
+  "include": ["**/*.ts", "src/helpers/db.tsx", "custom.d.ts"],
   "exclude": ["node_modules"]
 }
