@@ -1,17 +1,25 @@
 .home-section {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-flow: column;
 
-  .home-section-descripton-container {
+  &-container {
     display: flex;
-    flex: 1 0 auto;
 
-    .home-section-description {
-      flex: 1 1 auto;
-      width: 55vw;
-      padding: 3rem;
+    &-slogan {
+      padding: 7rem 3rem;
       background-color: var(--color-blue-light-80);
+      text-align: right;
+      width: fit-content;
+    }
+    .slogan {
+      margin: 0;
+      font-size: 5rem;
+      font-family: "ZenDots";
+      color: var(--color-white);
+      &--span {
+        color: var(--color-yellow-light-dark);
+      }
     }
   }
 

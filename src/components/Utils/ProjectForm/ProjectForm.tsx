@@ -1,10 +1,10 @@
-import { Button } from "../../../Button";
-import { TextInput } from "../../../Inputs";
-import { Form } from "../../../Form";
+import { Button } from "../../Inputs/Button";
+import { TextInput } from "../../Inputs";
+import { Form } from "../../Inputs/Form";
 import { useState } from "react";
-import { createProject } from "../../../../helpers/db";
+import { createProject } from "../../../helpers/db";
 
-export const AddProjectForm = () => {
+export const ProjectForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
@@ -59,4 +59,4 @@ export const AddProjectForm = () => {
   );
 };
 
-export default AddProjectForm;
+export default ProjectForm;

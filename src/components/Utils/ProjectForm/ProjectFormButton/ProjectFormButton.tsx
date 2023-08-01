@@ -1,11 +1,11 @@
-import { Button } from "../../../Button";
+import { Button } from "../../../Inputs";
 import { IoAddCircleOutline } from "react-icons/io5";
 
 type AddProjectButtonProps = {
   handleClick?: () => void;
 };
 
-export const AddProjectButton = (props: AddProjectButtonProps) => {
+export const ProjectFormButton = (props: AddProjectButtonProps) => {
   const { handleClick } = props;
   return (
     <Button
@@ -16,4 +16,4 @@ export const AddProjectButton = (props: AddProjectButtonProps) => {
   );
 };
 
-export default AddProjectButton;
+export default ProjectFormButton;

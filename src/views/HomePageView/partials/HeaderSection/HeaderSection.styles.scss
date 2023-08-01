@@ -1,26 +1,10 @@
 .header-section-navigation-container {
   background-color: var(--color-black-blue);
   margin: 0;
-  padding: 0;
+  padding-bottom: 1.5rem;
+  position: fixed;
+  width: 100%;
   height: fit-content;
-  flex: 1 1 auto;
-  .header-section-slogan {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .slogan {
-      width: 88%;
-      padding: 1rem;
-      margin: 0;
-      font-size: 3.5rem;
-      text-align: justify;
-      font-family: "ZenDots";
-      color: var(--color-white);
-      &--span {
-        color: var(--color-yellow-light-dark);
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 600px) {

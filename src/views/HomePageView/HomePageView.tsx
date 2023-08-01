@@ -1,9 +1,9 @@
 import "./HomePageView.styles.scss";
-import { HeaderSection } from "./partials";
+import { HeaderSection, ProjectSection } from "./partials";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../helpers/firebase";
-import { AddProjectButton, AddProjectForm, Button } from "../../components";
+import { ProjectForm, ProjectFormButton, Button } from "../../components";
 
 export const HomePageView = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -39,39 +39,40 @@ export const HomePageView = () => {
   }, []);
 
   return (
-    <div className="home-section">
-      <HeaderSection />
-      {isAuth && <p className="message-logged-in">Logged in!</p> && (
-        <Button
-          type="button"
-          label="Logout"
-          handleClick={handleLogout}
-          variant="logout"
-        />
-      )}
-      <div className="home-section-descripton-container">
-        <div className="home-section-description">
-          <p>
+    <>
+      <div className="home-section" id="home">
+        <HeaderSection />
+        {isAuth && <p className="message-logged-in">Logged in!</p> && (
+          <Button
+            type="button"
+            label="Logout"
+            handleClick={handleLogout}
+            variant="logout"
+          />
+        )}
+        <div className="home-section-container">
+          <div className="home-section-container-slogan">
+            <p className="slogan">
+              Transforming <span className="slogan--span">design</span>s into{" "}
+              engaging <span className="slogan--span">experience</span>
+            </p>
+          </div>
+          <div>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
             consequuntur neque, magnam aut, libero commodi laborum, optio culpa
             quidem suscipit recusandae aspernatur nam adipisci? Magni maiores
             quo fuga incidunt eius.
-          </p>
+          </div>
         </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-          consequuntur neque, magnam aut, libero commodi laborum, optio culpa
-          quidem suscipit recusandae aspernatur nam adipisci? Magni maiores quo
-          fuga incidunt eius.
-        </div>
+        {isAuth && (
+          <ProjectFormButton
+            handleClick={() => setOpenAddProjectForm(!openAddProjectForm)}
+          />
+        )}
+        {openAddProjectForm && <ProjectForm />}
       </div>
-      {isAuth && (
-        <AddProjectButton
-          handleClick={() => setOpenAddProjectForm(!openAddProjectForm)}
-        />
-      )}
-      {openAddProjectForm && <AddProjectForm />}
-    </div>
+      <ProjectSection />
+    </>
   );
 };
 

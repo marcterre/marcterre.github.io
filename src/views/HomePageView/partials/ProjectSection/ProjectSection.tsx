@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ProjectSection.styles.scss";
+import { Section, GridContainer, ProjectDisplay } from "../../../../components";
 
 export const ProjectSection = () => {
   const [showDescription, setShowDescription] = useState(false);
@@ -24,8 +25,48 @@ preview: ""}
   // ];
 
   return (
-    <section className="projects" id="projects">
-      <h2>This Webpage is under construction</h2>
-    </section>
+    <Section id="projects">
+      <div className="project-section">
+        <h2 className="project-section-title">Projects</h2>
+      </div>
+      <GridContainer columns={3}>
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/200/300"
+          alt="alkfjlas"
+        />
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/id/237/200/300"
+          alt="alkfjlas"
+        />
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/200/300"
+          alt="alkfjlas"
+        />
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/200/300"
+          alt="alkfjlas"
+        />
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/200/300"
+          alt="alkfjlas"
+        />
+        <ProjectDisplay
+          title="Project"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          src="https://picsum.photos/200/300"
+          alt="alkfjlas"
+        />
+      </GridContainer>
+    </Section>
   );
 };
