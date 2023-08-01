@@ -8,6 +8,11 @@
     "skipLibCheck": true,
     "jsx": "react-jsxdev"
   },
-  "include": ["**/*.ts", "src/helpers/db.tsx", "custom.d.ts"],
+  "include": [
+    "**/*.ts",
+    "src/helpers/db.ts",
+    "env.d.ts",
+    "src/helpers/firebase.tsx"
+  ],
   "exclude": ["node_modules"]
 }

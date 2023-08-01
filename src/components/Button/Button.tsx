@@ -1,8 +1,9 @@
 import "./Button.styles.scss";
+import { ReactElement } from "react";
 
 type ButtonProps = {
   type?: "button" | "submit" | "reset" | undefined;
-  label?: string;
+  label?: string | ReactElement;
   variant?: string;
   handleClick?: () => void;
 };
@@ -15,7 +16,13 @@ export const Button = (props: ButtonProps) => {
       type={type}
       onClick={handleClick}
     >
-      {label && label}
+      {typeof label === "string" ? (
+        <span>{label}</span>
+      ) : typeof label === "function" ? (
+        <label />
+      ) : (
+        label
+      )}
     </button>
   );
 };

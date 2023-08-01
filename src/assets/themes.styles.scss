@@ -1,7 +1,13 @@
 :root {
   --color-black: rgb(0, 0, 0);
+  --color-light-grey: rgb(190, 190, 190);
+
   --color-white: rgb(255, 255, 255);
   --color-green: rgb(0, 128, 0);
+  --color-green-50: rgb(0, 128, 0, 0.5);
+
+  --color-red: rgb(255, 0, 0);
+  --color-red-50: rgb(255, 0, 0, 0.5);
 
   --color-dark-pink: rgba(215, 79, 95);
   --color-dark-pink-80: rgba(215, 79, 95, 0.8);

@@ -1,2 +1,21 @@
 .input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  .input {
+    &--add-project {
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      border: none;
+
+      &:hover {
+        background-color: var(--color-light-grey);
+      }
+
+      &-file {
+        background-color: aliceblue;
+      }
+    }
+  }
 }

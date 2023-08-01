@@ -1,8 +1,12 @@
-import mongoose, { model, models, Schema } from "mongoose";
+import mongoose, { model, Schema } from "mongoose";
 import { v4 as uuidv4 } from "uuid";
 
-const URI = `mongodb+srv://${process.env.REACT_APP_MONGO_DB_USER}:${process.env.REACT_APP_MONGO_DB_PASSWORD}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
+const mongoDbUser = process.env.REACT_APP_MONGO_DB_USER;
+const mongoDbPassword = process.env.REACT_APP_MONGO_DB_PASSWORD;
 
+const URI = `mongodb+srv://${mongoDbUser}:${mongoDbPassword}@db-portfolio.abirw8w.mongodb.net/?retryWrites=true&w=majority`;
+
+console.log("URI", URI);
 const projectSchema = new Schema({
   id: String,
   name: String,
@@ -10,7 +14,7 @@ const projectSchema = new Schema({
   image: String,
 });
 
-const Project = models.Project || model("Project", projectSchema);
+const Project = model("Project", projectSchema);
 
 async function connectDatabase() {
   try {
@@ -46,7 +50,11 @@ async function getProject(id: string) {
   return project;
 }
 
-async function createProject(project: string[]) {
+async function createProject(project: {
+  name: string;
+  description: string;
+  image: string;
+}) {
   await connectDatabase();
 
   const createdProject = await Project.create({

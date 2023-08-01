@@ -3,10 +3,11 @@ import { HeaderSection } from "./partials";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../helpers/firebase";
-import { Button } from "../../components";
+import { AddProjectButton, AddProjectForm, Button } from "../../components";
 
 export const HomePageView = () => {
   const [isAuth, setIsAuth] = useState(false);
+  const [openAddProjectForm, setOpenAddProjectForm] = useState(false);
 
   const handleLogout = () => {
     signOut(auth)
@@ -40,7 +41,14 @@ export const HomePageView = () => {
   return (
     <div className="home-section">
       <HeaderSection />
-      {isAuth && <p className="message-logged-in">Logged in!</p>}
+      {isAuth && <p className="message-logged-in">Logged in!</p> && (
+        <Button
+          type="button"
+          label="Logout"
+          handleClick={handleLogout}
+          variant="logout"
+        />
+      )}
       <div className="home-section-descripton-container">
         <div className="home-section-description">
           <p>
@@ -58,13 +66,11 @@ export const HomePageView = () => {
         </div>
       </div>
       {isAuth && (
-        <Button
-          type="button"
-          label="Logout"
-          handleClick={handleLogout}
-          variant="logout"
+        <AddProjectButton
+          handleClick={() => setOpenAddProjectForm(!openAddProjectForm)}
         />
       )}
+      {openAddProjectForm && <AddProjectForm />}
     </div>
   );
 };
