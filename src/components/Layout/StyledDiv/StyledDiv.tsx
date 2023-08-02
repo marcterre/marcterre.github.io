@@ -1,5 +1,4 @@
 import { CSSProperties } from "react";
-import "./StyledDiv.styles.scss";
 
 type StyledDivType = {
 	variant?: string;
