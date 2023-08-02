@@ -1,30 +1,30 @@
 .navigation-wrapper {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  .navigation {
-    a {
-      text-decoration: none;
-      color: var(--color-white);
-      font-weight: 300;
-      text-transform: uppercase;
-      &:hover {
-        background-color: var(--color-dark-pink-80);
-      }
-    }
-    &--home-section {
-      margin-top: 1.5rem;
-      list-style: none;
-      border-bottom: 3px solid var(--color-dark-pink-80);
-      display: flex;
-      justify-content: space-evenly;
-      width: 90%;
-      padding: 0.5rem 1rem;
-      font-size: 0.7rem;
-      font-family: "ZenDots";
-      &:hover {
-        box-shadow: 1px var(--color-dark-pink-80);
-      }
-    }
-  }
+	height: 100vh;
+	.navigation {
+		a {
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+			text-decoration: none;
+			color: var(--color-white);
+			font-weight: 300;
+			text-transform: uppercase;
+			&:hover {
+				background-color: var(--color-dark-pink-80);
+			}
+		}
+		&-list-item {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+		}
+		&--home-section {
+			height: 100%;
+			display: grid;
+			list-style: none;
+			padding: 0 1rem;
+			border-left: 3px solid var(--color-yellow-light-dark);
+			font-size: 0.7rem;
+			font-family: "ZenDots";
+		}
+	}
 }
