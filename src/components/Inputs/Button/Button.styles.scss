@@ -1,41 +1,59 @@
 .button {
-  cursor: pointer;
-  &--logout {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    background: none;
-    color: var(--color-white);
-    border: none;
-    opacity: 0.5;
-    &:hover {
-      border-bottom: 1px solid var(--color-white);
-    }
-  }
+	cursor: pointer;
+	&--logout {
+		position: absolute;
+		left: 1rem;
+		top: 1rem;
+		background: none;
+		color: var(--color-white);
+		border: none;
+		opacity: 0.5;
+		&:hover {
+			border-bottom: 1px solid var(--color-white);
+		}
+	}
 
-  &--add-project {
-    position: fixed;
-    left: 2rem;
-    bottom: 2rem;
-    background: none;
-    border: none;
-    opacity: 0.5;
+	&--add-project {
+		position: fixed;
+		left: 2rem;
+		bottom: 2rem;
+		background: none;
+		border: none;
+		opacity: 0.5;
 
-    &-cancel,
-    &-submit {
-      background: none;
-      border: 1px solid var(--color-white);
-      padding: 0.5rem;
-      border-radius: 0.3rem;
-      color: var(--color-white);
-    }
+		&-cancel,
+		&-submit {
+			background: none;
+			border: 1px solid var(--color-white);
+			padding: 0.5rem;
+			border-radius: 0.3rem;
+			color: var(--color-white);
+		}
 
-    &-cancel:hover {
-      background-color: var(--color-red-50);
-    }
+		&-cancel:hover {
+			background-color: var(--color-red-50);
+		}
 
-    &-submit:hover {
-      background-color: var(--color-green-50);
-    }
-  }
+		&-submit:hover {
+			background-color: var(--color-green-50);
+		}
+	}
+
+	&--carousel-next-button,
+	&--carousel-prev-button {
+		padding: 5px 10px;
+		background-color: #3498db;
+		color: white;
+		border: none;
+		cursor: pointer;
+	}
+
+	&--carousel-prev-button {
+		position: absolute;
+
+		top: 0;
+		width: 4rem;
+		height: 10rem;
+		left: -2rem;
+	}
 }

@@ -1,0 +1,29 @@
+.corner-overlay {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	.vertical {
+		background-image: linear-gradient(
+			to left,
+			#d45967,
+			#d45967,
+			#f4656b,
+			#d45967,
+			#f4656b,
+			#d45967,
+			#d45967
+		);
+		background-size: 800% 100%;
+		animation: moveColorsVertical 6s linear infinite;
+	}
+}
+
+@keyframes moveColorsVertical {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% 0;
+	}
+}

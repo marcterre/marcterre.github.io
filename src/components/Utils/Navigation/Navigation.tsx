@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import "./Navigation.styles.scss";
-import React from "react";
 
 type NavigationProps = {
 	navigationItems: {
@@ -17,7 +16,9 @@ export const Navigation = (props: NavigationProps) => {
 			<nav className={`navigation navigation--${variant ? variant : ""}`}>
 				{navigationItems.map((items, index) => (
 					<li className="navigation-list-item" key={index}>
-						<a href={items.route}>{items.label}</a>
+						<a href={items.route} target="_blank" rel="noreferrer">
+							{items.label}
+						</a>
 					</li>
 				))}
 			</nav>

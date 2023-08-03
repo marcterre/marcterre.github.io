@@ -4,16 +4,16 @@ import "./HeaderSection.styles.scss";
 export const HeaderSection = () => {
 	const navigationItems = [
 		{
-			label: "Home",
-			route: "#home",
+			label: "LinkedIn",
+			route: "https://www.linkedin.com/in/marcterre/",
 		},
 		{
-			label: "Projects",
-			route: "#projects",
+			label: "Github",
+			route: "https://github.com/marcterre",
 		},
 		{
 			label: "Contact",
-			route: "#contact",
+			route: "mailto:marc.terre@outlook.de",
 		},
 	];
 	return (

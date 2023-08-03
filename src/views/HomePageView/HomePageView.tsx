@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../helpers/firebase";
 import { ProjectForm, ProjectFormButton, Button, Section } from "../../components";
-import StyledCorner from "../../components/Utils/StyledCorner/StyledCorner";
 
 export const HomePageView = () => {
 	const [isAuth, setIsAuth] = useState(false);
@@ -36,6 +35,7 @@ export const HomePageView = () => {
 	return (
 		<>
 			<HeaderSection />
+			{/* <StyledCorner /> */}
 			<Section id="home">
 				{isAuth && <p className="message-logged-in">Logged in!</p> && (
 					<Button
@@ -51,9 +51,8 @@ export const HomePageView = () => {
 					/>
 				)}
 				{openAddProjectForm && <ProjectForm />}
-				<StyledCorner />
+				<ProjectSection />
 			</Section>
-			<ProjectSection />
 		</>
 	);
 };
