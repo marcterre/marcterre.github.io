@@ -9,12 +9,14 @@
 		"skipLibCheck": true,
 		"jsx": "react-jsx"
 	},
+
 	"include": [
 		"src",
 		"**/*.ts",
+		"**/*.tsx",
 		"src/helpers/db.ts",
-		"env.d.ts",
-		"src/helpers/firebase.tsx"
+		"index.d.ts",
+		"src/helpers/firebase.ts"
 	],
 	"exclude": ["node_modules"]
 }

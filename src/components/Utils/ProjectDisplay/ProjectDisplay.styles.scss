@@ -1,34 +1,55 @@
 .project {
-	flex: 0 0 100%;
-	text-align: center;
-	background-color: var(--color-dark-black-blue-30);
-	box-shadow: inset 0 0 20px var(--color-light-blue-white-80);
-	border-radius: 3px;
+	display: grid;
+	gap: 0.5rem;
+	padding: 0.5rem;
 	border: 2px solid var(--color-light-blue-white-80);
-	transform-origin: center center;
-	transition: transform 0.3s ease;
+	box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
+	border-radius: 3px;
+	height: 35vh;
 
-	&-middle {
-		display: grid;
-	}
-
-	&-title,
-	&-description {
+	&-title {
 		margin: 0;
-		padding: 0.2rem;
+		padding: 0.3rem;
 	}
 
-	&-image {
+	&-tech-stack {
+		font-family: "Abel";
+		letter-spacing: 1px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: end;
+		font-size: 0.8rem;
+		gap: 0.2rem;
+		flex-wrap: wrap;
+
+		p {
+			width: fit-content;
+			height: fit-content;
+			border-radius: 2px;
+			padding: 0.2rem;
+			color: var(--color-background);
+			background-color: var(--color-light-blue-white-80);
+			transition: box-shadow 0.3s ease-in-out;
+			margin: 0;
+		}
+	}
+
+	&-image-wrapper {
+		border: 2px solid red;
+		display: flex;
+		align-items: center;
+	}
+
+	&-image,
+	&-placeholder {
 		object-fit: contain;
-		height: 40vh;
-		opacity: 1;
-		display: block;
-		transition: 0.5s ease;
-		backface-visibility: hidden;
+		width: 20vw;
+		height: 21vh;
+		margin: 0;
 	}
 
 	&-button-wrapper {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 	}
 }

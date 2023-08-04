@@ -35,8 +35,8 @@ export const HomePageView = () => {
 	return (
 		<>
 			<HeaderSection />
-			{/* <StyledCorner /> */}
 			<Section id="home">
+				<h1>Home</h1>
 				{isAuth && <p className="message-logged-in">Logged in!</p> && (
 					<Button
 						type="button"

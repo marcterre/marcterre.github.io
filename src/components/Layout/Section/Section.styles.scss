@@ -1,9 +1,12 @@
 .section {
-	padding-left: 3.5rem;
-
 	&--home {
-	}
-
-	&--projects {
+		padding-left: 5rem;
+		height: 100%;
+		width: calc(99% - 5rem);
+		display: grid;
+		justify-items: center;
+		grid-template-rows: repeat(2, 1fr);
+		.section--projects {
+		}
 	}
 }

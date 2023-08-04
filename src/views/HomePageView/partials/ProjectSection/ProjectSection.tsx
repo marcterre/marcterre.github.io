@@ -1,5 +1,5 @@
-import "./ProjectSection.styles.scss";
-import { Section, GridContainer } from "../../../../components";
+import { Section } from "../../../../components";
+import mockProject from "../../../../assets/images/mock-project.jpeg";
 import Carousel from "../../../../components/Utils/Carousel/Carousel";
 
 export const ProjectSection = () => {
@@ -26,32 +26,48 @@ preview: ""}
 	const projects = [
 		{
 			title: "Project",
-			description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			src: "https://picsum.photos/200/300",
-			alt: "alkfjlas",
+			techStack: ["React", "Typescript", "Styled components"],
+			src: mockProject,
+			alt: "mockProject",
 		},
 		{
 			title: "Project",
-			description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			src: "https://picsum.photos/200/300",
-			alt: "alkfjlas",
+			techStack: ["React", "Typescript", "Styled components"],
 		},
 		{
 			title: "Project",
-			description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			src: "https://picsum.photos/200/300",
-			alt: "alkfjlas",
+			techStack: ["React", "Typescript", "Styled components"],
+			src: mockProject,
+			alt: "mockProject",
+		},
+		{
+			title: "Project",
+			techStack: ["React", "Typescript", "Styled components"],
+			src: mockProject,
+			alt: "mockProject",
+		},
+		{
+			title: "Project",
+			techStack: ["React", "Typescript", "Styled components"],
+		},
+		{
+			title: "Project",
+			techStack: [
+				"React",
+				"Typescript",
+				"Styled components",
+				"Scss",
+				"Cypress",
+				"Storybook",
+			],
+			src: mockProject,
+			alt: "mockProject",
 		},
 	];
 
 	return (
 		<Section id="projects">
-			{/* <div className="project-section">
-				<h2 className="project-section-title">Projects</h2>
-			</div> */}
-			<GridContainer columns={1}>
-				<Carousel items={projects} />
-			</GridContainer>
+			<Carousel items={projects} carouselTitle="Projects" />
 		</Section>
 	);
 };

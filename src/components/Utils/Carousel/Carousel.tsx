@@ -1,19 +1,21 @@
-import { useState } from "react";
 import "./Carousel.styles.scss";
+import { useState } from "react";
 import { Button } from "../../Inputs";
 import { ProjectDisplay } from "../ProjectDisplay";
 
 type CarouselType = {
 	items: {
 		title: string;
-		description: string;
-		src: string;
-		alt: string;
+		techStack: string[];
+		src?: string;
+		alt?: string;
 	}[];
+	carouselTitle?: string;
 };
 
 const Carousel = (props: CarouselType) => {
-	const { items } = props;
+	const { items, carouselTitle } = props;
+
 	const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
 	const handlePrevButtonClick = () => {
@@ -30,31 +32,44 @@ const Carousel = (props: CarouselType) => {
 
 	return (
 		<div className="carousel">
-			<div
-				className="carousel-container"
-				style={{
-					transform: `translateX(-${currentItemIndex * 100}%)`,
-				}}
-			>
-				{items.map((item) => {
-					const { title, description, src, alt } = item;
-					return (
-						<ProjectDisplay title={title} description={description} src={src} alt={alt} />
-					);
-				})}
+			<h2 className="carousel-title">{carouselTitle}</h2>
+			<div className="carousel-wrapper">
+				<div
+					className="carousel-container"
+					style={{
+						transform: `translateX(-${currentItemIndex * 100}%)`,
+					}}
+				>
+					{items.map((item, index) => {
+						const { title, techStack, src, alt } = item;
+						return (
+							<ProjectDisplay
+								key={index}
+								title={title}
+								techStack={techStack}
+								src={src}
+								alt={alt}
+							/>
+						);
+					})}
+				</div>
 			</div>
-			{/* <div className="controls"> */}
-			<Button
-				variant="carousel-prev-button"
-				handleClick={handlePrevButtonClick}
-				label="Previous"
-			/>
-			<Button
-				variant="carousel-next-button"
-				handleClick={handleNextButtonClick}
-				label="Next"
-			/>
-			{/* </div> */}
+			<div className="controls">
+				{currentItemIndex < items.length - 5 && (
+					<Button
+						variant="carousel-next-button"
+						handleClick={handleNextButtonClick}
+						label="Next"
+					/>
+				)}
+				{currentItemIndex > 0 && (
+					<Button
+						variant="carousel-prev-button"
+						handleClick={handlePrevButtonClick}
+						label="Previous"
+					/>
+				)}
+			</div>
 		</div>
 	);
 };
