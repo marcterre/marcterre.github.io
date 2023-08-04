@@ -16,17 +16,17 @@ type CarouselType = {
 const Carousel = (props: CarouselType) => {
 	const { items, carouselTitle } = props;
 
-	const [currentItemIndex, setCurrentItemIndex] = useState(0);
+	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
 	const handlePrevButtonClick = () => {
-		if (currentItemIndex > 0) {
-			setCurrentItemIndex((prevIndex) => prevIndex - 1);
+		if (currentSlideIndex > 0) {
+			setCurrentSlideIndex((prevIndex) => prevIndex - 4);
 		}
 	};
 
 	const handleNextButtonClick = () => {
-		if (currentItemIndex < items.length - 1) {
-			setCurrentItemIndex((prevIndex) => prevIndex + 1);
+		if (currentSlideIndex < 4) {
+			setCurrentSlideIndex((prevIndex) => prevIndex + 4);
 		}
 	};
 
@@ -37,7 +37,7 @@ const Carousel = (props: CarouselType) => {
 				<div
 					className="carousel-container"
 					style={{
-						transform: `translateX(-${currentItemIndex * 100}%)`,
+						transform: `translateX(-${currentSlideIndex * (100 / 4)}%)`,
 					}}
 				>
 					{items.map((item, index) => {
@@ -55,14 +55,14 @@ const Carousel = (props: CarouselType) => {
 				</div>
 			</div>
 			<div className="controls">
-				{currentItemIndex < items.length - 5 && (
+				{currentSlideIndex < Math.ceil(items.length / 4) - 1 && (
 					<Button
 						variant="carousel-next-button"
 						handleClick={handleNextButtonClick}
 						label="Next"
 					/>
 				)}
-				{currentItemIndex > 0 && (
+				{currentSlideIndex > 0 && (
 					<Button
 						variant="carousel-prev-button"
 						handleClick={handlePrevButtonClick}
