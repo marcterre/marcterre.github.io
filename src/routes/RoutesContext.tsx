@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Route, Routes } from "react-router-dom";
 import { HomePageView } from "../views/HomePageView";
 import AuthenticationView from "../views/AuthenticationView/AuthenticationView";

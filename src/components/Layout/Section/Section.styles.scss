@@ -1,9 +1,23 @@
 .section {
-	&--home {
-		padding-left: 5rem;
-		width: calc(99% - 5rem);
-		display: grid;
-		.section--projects {
-		}
-	}
+  &--home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+    &--about {
+      display: flex;
+    }
+    &--projects {
+      // display: grid;
+      // justify-content: center;
+      // align-items: start;
+      // height: 50vh;
+      // padding: 2rem 1rem;
+      overflow: scroll;
+      border: 2px solid var(--color-light-blue-white-80);
+      box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
+      border-radius: 3px;
+    }
+  }
 }

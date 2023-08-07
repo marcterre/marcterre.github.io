@@ -1,65 +1,67 @@
 .project {
-	display: grid;
-	gap: 0.5rem;
-	padding: 0.5rem;
-	border: 2px solid var(--color-light-blue-white-80);
-	box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
-	border-radius: 3px;
-	height: 39vh;
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color-light-blue-white-80);
+  box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
+  border-radius: 3px;
+  height: 40vh;
+  width: calc(83vw / 4);
+  overflow: scroll;
 
-	&-title {
-		margin: 0;
-		padding: 0.5rem;
-	}
+  &-title {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
 
-	&-tech-stack {
-		font-family: "Abel";
-		letter-spacing: 1px;
-		display: flex;
-		justify-content: flex-end;
-		align-items: end;
-		font-size: 0.8rem;
-		gap: 0.2rem;
-		flex-wrap: wrap;
+  &-tech-stack {
+    font-family: "Abel";
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 3px;
 
-		p {
-			width: fit-content;
-			height: fit-content;
-			border-radius: 2px;
-			padding: 0.2rem;
-			color: var(--color-background);
-			background-color: var(--color-light-blue-white-80);
-			transition: box-shadow 0.3s ease-in-out;
-			margin: 0;
-		}
-	}
+    p {
+      width: fit-content;
+      height: fit-content;
+      border-radius: 2px;
+      padding: 0.2rem;
+      color: var(--color-background);
+      background-color: var(--color-light-blue-white-80);
+      margin: 0;
+    }
+  }
 
-	&-image-wrapper {
-		--s: 50px;
+  &-image-wrapper {
+    justify-self: center;
+    padding: 0.5rem 1rem;
+    --s: 40px;
 
-		padding: 1rem;
-		margin: 0 1rem;
-		outline: 4px solid var(--color-light-blue-white-80);
-		outline-offset: calc(-1 * 4px);
-		mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
-				calc(100% - var(--s)) calc(100% - var(--s)),
-			linear-gradient(#000 0 0) content-box;
-		transition: 0.4s;
-		display: flex;
-		align-items: center;
-	}
+    outline: 4px solid var(--color-light-blue-white-80);
+    outline-offset: calc(-1 * 4px);
+    mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+        calc(100% - var(--s)) calc(100% - var(--s)),
+      linear-gradient(#000 0 0) content-box;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
 
-	&-image,
-	&-placeholder {
-		object-fit: contain;
-		width: 19.3vw;
-		height: 21vh;
-		margin: 0;
-	}
+  &-image,
+  &-placeholder {
+    object-fit: contain;
+    height: 15vh;
+    margin: 0;
+  }
 
-	&-button-wrapper {
-		display: flex;
-		justify-content: flex-end;
-		gap: 2rem;
-	}
+  &-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
 }

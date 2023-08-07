@@ -1,2 +1,2 @@
 export * from "./ProjectSection";
-export * from "./HeaderSection";
+export * from "./LinkSection";
