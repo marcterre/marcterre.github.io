@@ -61,7 +61,7 @@ preview: ""}
   return (
     <Section id="projects">
       <h2>Projects</h2>
-      <GridContainer columns={4}>
+      <GridContainer variant="projects">
         {projects.map((project, index) => {
           const { title, techStack, src, alt, preview } = project;
           return (

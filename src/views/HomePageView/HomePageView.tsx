@@ -39,7 +39,7 @@ export const HomePageView = () => {
   }, []);
 
   return (
-    <Section id="home">
+    <div className="home">
       <LinkSection />
       <main>
         {isAuth && <p className="message-logged-in">Logged in!</p> && (
@@ -59,7 +59,7 @@ export const HomePageView = () => {
         <AboutSection />
         <ProjectSection />
       </main>
-    </Section>
+    </div>
   );
 };
 
