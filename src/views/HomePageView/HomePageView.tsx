@@ -3,12 +3,7 @@ import { LinkSection, ProjectSection } from "./partials";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../helpers/firebase";
-import {
-  ProjectForm,
-  ProjectFormButton,
-  Button,
-  Section,
-} from "../../components";
+import { ProjectForm, ProjectFormButton, Button } from "../../components";
 import { AboutSection } from "./partials/AboutSection";
 
 export const HomePageView = () => {
