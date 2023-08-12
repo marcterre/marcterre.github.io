@@ -4,7 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background-color: var(--color-dark-pink);
   box-sizing: border-box;
+  background: var(--color-background);
+  font-family: "ZenDots";
+  color: var(--color-light-blue);
 }

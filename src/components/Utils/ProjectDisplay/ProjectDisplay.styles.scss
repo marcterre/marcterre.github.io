@@ -1,0 +1,67 @@
+.project {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color-light-blue-white-80);
+  box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
+  border-radius: 3px;
+  height: 95%;
+  width: calc(80vw / 3);
+  overflow: auto;
+
+  &-title {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  &-tech-stack {
+    font-family: "Abel";
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 3px;
+
+    p {
+      width: fit-content;
+      height: fit-content;
+      border-radius: 2px;
+      padding: 0.2rem;
+      color: var(--color-background);
+      background-color: var(--color-light-blue-white-80);
+      margin: 0;
+    }
+  }
+
+  &-image-wrapper {
+    justify-self: center;
+    padding: 1rem 1.5rem;
+    --s: 40px;
+
+    outline: 4px solid var(--color-light-blue-white-80);
+    outline-offset: calc(-1 * 4px);
+    mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+        calc(100% - var(--s)) calc(100% - var(--s)),
+      linear-gradient(#000 0 0) content-box;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  &-image,
+  &-placeholder {
+    object-fit: contain;
+    height: 17vh;
+    margin: 0;
+  }
+
+  &-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+}

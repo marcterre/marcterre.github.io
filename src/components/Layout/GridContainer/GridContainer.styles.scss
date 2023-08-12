@@ -1,0 +1,6 @@
+.grid-container {
+  &--projects {
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+  }
+}

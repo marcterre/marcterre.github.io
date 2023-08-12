@@ -1,11 +1,25 @@
 :root {
-  --color-black: rgb(0, 0, 0);
-  --color-white: rgb(255, 255, 255);
-  --color-green: rgb(0, 128, 0);
+  --color-background: #242526;
 
-  --color-dark-pink: rgba(215, 79, 95);
-  --color-dark-pink-80: rgba(215, 79, 95, 0.8);
-  --color-black-blue: rgb(26, 32, 51);
-  --color-yellow-light-dark: rgb(255, 230, 1);
-  --color-blue-light-80: rgba(30, 86, 171, 0.8);
+  --color-black: rgb(0, 0, 0);
+  --color-light-grey: rgb(190, 190, 190);
+
+  --color-white: rgb(255, 255, 255);
+
+  --color-white-blue: #edf6f2;
+  --color-light-blue-white: rgb(146, 214, 219);
+  --color-light-blue-white-80: rgba(146, 214, 219, 0.8);
+  --color-light-blue-white-60: rgba(146, 214, 219, 0.6);
+  --color-light-blue: #44aad6;
+  --color-dark-blue: #2b516c;
+  --color-dark-black-blue-30: rgba(45, 61, 70, 0.3);
+  --color-dark-black-blue-50: rgba(45, 61, 70, 0.5);
+  --color-dark-black-blue: #2d3d46;
+
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
 }

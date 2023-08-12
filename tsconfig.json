@@ -1,13 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "jsx": "react-jsxdev"
+    "jsx": "react-jsx"
   },
-  "include": ["**/*.ts", "src/helpers/db.tsx", "custom.d.ts"],
+
+  "include": [
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/helpers/db.ts",
+    "index.d.ts",
+    "src/helpers/firebase.ts"
+  ],
   "exclude": ["node_modules"]
 }

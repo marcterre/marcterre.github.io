@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import "./TextInput.styles.scss";
 
 type TextInputProps = {
   label?: string;

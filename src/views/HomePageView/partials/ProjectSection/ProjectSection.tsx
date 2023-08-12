@@ -1,8 +1,7 @@
-import { useState } from "react";
-import "./ProjectSection.styles.scss";
+import { GridContainer, ProjectDisplay, Section } from "../../../../components";
+import mockProject from "../../../../assets/images/mock-project.jpeg";
 
 export const ProjectSection = () => {
-  const [showDescription, setShowDescription] = useState(false);
   // const finishedProjects = [
   // 	{
   // 		name: "PocketBuilder",
@@ -23,9 +22,60 @@ preview: ""}
   */
   // ];
 
+  const projects = [
+    {
+      title: "Project",
+      techStack: ["React", "Typescript", "Styled components"],
+      src: mockProject,
+      alt: "mockProject",
+      preview: true,
+    },
+    {
+      title: "Project",
+      techStack: ["React", "Typescript", "Styled components"],
+      preview: true,
+    },
+    {
+      title: "Project",
+      techStack: ["React", "Typescript", "Styled components"],
+    },
+    {
+      title: "Project",
+      techStack: [
+        "React",
+        "Typescript",
+        "Styled components",
+        "Scss",
+        "Cypress",
+        "Storybook",
+        "Scss",
+        "Cypress",
+        "Storybook",
+      ],
+      src: mockProject,
+      alt: "mockProject",
+      preview: true,
+    },
+  ];
+
   return (
-    <section className="projects" id="projects">
-      <h2>This Webpage is under construction</h2>
-    </section>
+    <Section id="projects">
+      <h2>Projects</h2>
+      <GridContainer variant="projects">
+        {projects.map((project, index) => {
+          const { title, techStack, src, alt, preview } = project;
+          return (
+            <ProjectDisplay
+              key={index}
+              title={title}
+              techStack={techStack}
+              src={src}
+              alt={alt}
+              preview={preview}
+            />
+          );
+        })}
+      </GridContainer>
+    </Section>
   );
 };
