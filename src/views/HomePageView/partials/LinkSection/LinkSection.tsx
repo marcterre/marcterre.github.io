@@ -1,3 +1,4 @@
+import { Section } from "../../../../components";
 import { Navigation } from "../../../../components/Utils/Navigation";
 
 export const LinkSection = () => {
@@ -11,11 +12,15 @@ export const LinkSection = () => {
       route: "https://github.com/marcterre",
     },
     {
-      label: "Contact",
+      label: "Email",
       route: "mailto:marc.terre@outlook.de",
     },
   ];
-  return <Navigation navigationItems={navigationItems} />;
+  return (
+    <Section id="link">
+      <Navigation navigationItems={navigationItems} />
+    </Section>
+  );
 };
 
 export default LinkSection;

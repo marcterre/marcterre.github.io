@@ -16,12 +16,21 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .home-section {
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-  .home-section {
+@media only screen and (max-width: 768px) {
+  .home {
+    height: fit-content;
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 1rem;
+    main {
+      justify-content: center;
+      height: 100%;
+      width: 95%;
+      gap: 1rem;
+    }
   }
 }
 

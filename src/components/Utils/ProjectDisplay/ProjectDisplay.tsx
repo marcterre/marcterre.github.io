@@ -15,6 +15,9 @@ export const ProjectDisplay = (props: ProjectDisplayType) => {
   return (
     <div className="project" style={style}>
       <h3 className="project-title">{title}</h3>
+      <p className="project-description">
+        lkansasdlknasdljknalkdnalskdnaksldnaslkdnjnajknaskjfnsjf
+      </p>
       {src ? (
         <div className="project-image-wrapper">
           <img className="project-image" src={src} alt={alt} />

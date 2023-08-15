@@ -1,47 +1,42 @@
 .button {
-	border: none;
-	cursor: pointer;
-	background: none;
-	font-family: "ZenDots";
-	color: var(--color-light-blue);
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-family: "ZenDots";
+  color: var(--color-light-blue);
+  border-bottom: 2px solid var(--color-light-blue-50);
 
-	&--logout {
-		position: absolute;
-		left: 1rem;
-		top: 1rem;
-		color: var(--color-white);
-		opacity: 0.5;
-		&:hover {
-			border-bottom: 1px solid var(--color-white);
-		}
-	}
+  &--logout {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--color-white);
+    opacity: 0.5;
+    &:hover {
+      border-bottom: 1px solid var(--color-white);
+    }
+  }
 
-	&--add-project {
-		position: fixed;
-		left: 2rem;
-		bottom: 2rem;
-		opacity: 0.5;
+  &--add-project {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    opacity: 0.5;
 
-		&-cancel,
-		&-submit {
-			border: 1px solid var(--color-white);
-			padding: 0.5rem;
-			border-radius: 0.3rem;
-			color: var(--color-white);
-		}
+    &-cancel,
+    &-submit {
+      border: 1px solid var(--color-white);
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      color: var(--color-white);
+    }
 
-		&-cancel:hover {
-			background-color: var(--color-red-50);
-		}
+    &-cancel:hover {
+      background-color: var(--color-red-50);
+    }
 
-		&-submit:hover {
-			background-color: var(--color-green-50);
-		}
-	}
-
-	&--carousel-next-button,
-	&--carousel-prev-button {
-		padding: 0.5rem;
-		font-size: medium;
-	}
+    &-submit:hover {
+      background-color: var(--color-green-50);
+    }
+  }
 }
