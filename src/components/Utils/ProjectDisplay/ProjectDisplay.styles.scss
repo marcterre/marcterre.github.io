@@ -8,13 +8,19 @@
   width: calc(80vw / 3);
   overflow: auto;
 
+  &-heading {
+    min-height: 8vh;
+    height: fit-content;
+  }
+
   &-title {
     font-size: 0.9rem;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 0.3rem;
   }
 
   &-description {
+    padding: 0 0.3rem;
     font-size: 0.8rem;
     margin: 0;
     overflow: auto;
@@ -42,8 +48,13 @@
     }
   }
 
-  &-image-wrapper {
+  &-container {
     justify-self: center;
+    align-self: flex-end;
+    height: 22vh;
+  }
+
+  &-image-wrapper {
     padding: 1rem 1.5rem;
     --s: 40px;
 
@@ -60,6 +71,10 @@
 
   &-image,
   &-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     object-fit: contain;
     height: 17vh;
     margin: 0;
@@ -68,6 +83,7 @@
   &-button-wrapper {
     display: flex;
     justify-content: flex-end;
+    align-items: end;
     gap: 2rem;
   }
 }
