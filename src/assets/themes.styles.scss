@@ -1,17 +1,20 @@
 :root {
   --color-background: #242526;
+  --font-color: rgb(68, 170, 214);
 
   --color-black: rgb(0, 0, 0);
   --color-light-grey: rgb(190, 190, 190);
 
   --color-white: rgb(255, 255, 255);
 
-  --color-white-blue: #edf6f2;
+  --color-white-blue: #d1edf1;
   --color-light-blue-white: rgb(146, 214, 219);
   --color-light-blue-white-80: rgba(146, 214, 219, 0.8);
   --color-light-blue-white-60: rgba(146, 214, 219, 0.6);
   --color-light-blue: #44aad6;
+  --color-light-blue-50: rgba(92, 163, 194, 0.5);
   --color-dark-blue: #2b516c;
+  --color-dark-blue: rgba(43, 81, 108, 0.714);
   --color-dark-black-blue-30: rgba(45, 61, 70, 0.3);
   --color-dark-black-blue-50: rgba(45, 61, 70, 0.5);
   --color-dark-black-blue: #2d3d46;

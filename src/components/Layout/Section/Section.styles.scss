@@ -2,7 +2,7 @@
   &--about {
     display: flex;
     justify-content: space-between;
-    height: 34vh;
+    height: 37vh;
   }
   &--projects {
     height: 50vh;
@@ -15,5 +15,27 @@
     border-radius: 3px;
     display: grid;
     grid-auto-rows: max-content;
+  }
+
+  &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    &--link {
+      height: fit-content;
+      padding: 0;
+    }
+
+    &--projects {
+      height: fit-content;
+      overflow: initial;
+    }
   }
 }

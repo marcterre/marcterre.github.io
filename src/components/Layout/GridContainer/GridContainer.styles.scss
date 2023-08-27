@@ -1,6 +1,16 @@
 .grid-container {
   &--projects {
     grid-template-columns: repeat(3, auto);
-    gap: 1rem;
+    justify-content: space-evenly;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    &--projects {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
   }
 }

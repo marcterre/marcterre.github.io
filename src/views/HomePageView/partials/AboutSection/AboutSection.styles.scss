@@ -3,3 +3,11 @@
     height: 95vh;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .about-image-wrapper {
+    .about-image {
+      display: none;
+    }
+  }
+}

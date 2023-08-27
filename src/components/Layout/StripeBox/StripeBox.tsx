@@ -1,19 +1,19 @@
-import "./StyledBox.styles.scss";
+import "./StripeBox.styles.scss";
 
-type StyledBoxType = {
+type StripeBoxType = {
   subContent?: string;
-  title?: string;
   description?: string;
+  children?: React.ReactNode;
 };
 
-export const StyledBox = (props: StyledBoxType) => {
-  const { title, subContent, description } = props;
-  const arrayLength = 16;
+export const StripeBox = (props: StripeBoxType) => {
+  const { subContent, description, children } = props;
+  const arrayLength = 13;
   return (
     <div className="box">
+      {children}
       <div className="box-middle">
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <p className="box-middle-description">{description}</p>
       </div>
       <div className="box-container">
         <div className="box-container-left">
@@ -43,4 +43,4 @@ export const StyledBox = (props: StyledBoxType) => {
   );
 };
 
-export default StyledBox;
+export default StripeBox;

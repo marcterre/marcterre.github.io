@@ -29,11 +29,13 @@ preview: ""}
       src: mockProject,
       alt: "mockProject",
       preview: true,
+      description: "alkjnjkadhku",
     },
     {
       title: "Project",
       techStack: ["React", "Typescript", "Styled components"],
       preview: true,
+      description: "alkjnjkadhku",
     },
     {
       title: "Project",
@@ -63,7 +65,7 @@ preview: ""}
       <h2>Projects</h2>
       <GridContainer variant="projects">
         {projects.map((project, index) => {
-          const { title, techStack, src, alt, preview } = project;
+          const { title, techStack, src, alt, preview, description } = project;
           return (
             <ProjectDisplay
               key={index}
@@ -72,6 +74,7 @@ preview: ""}
               src={src}
               alt={alt}
               preview={preview}
+              description={description}
             />
           );
         })}
