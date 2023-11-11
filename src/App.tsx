@@ -1,8 +1,5 @@
-import "./App.styles.scss";
-import { RoutesContext } from "./routes/RoutesContext";
-
-export const App = () => {
-  return <RoutesContext />;
-};
+function App() {
+  return <div>Hello</div>;
+}
 
 export default App;
