@@ -39,13 +39,83 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     border-radius: 2px;
+    filter: drop-shadow(0 3px 5px);
+    animation: glitch 2s linear infinite;
+
+    &:before,
+    &:after {
+      content: attr(title);
+      position: absolute;
+      left: 1.3rem;
+    }
+    &:before {
+      animation: glitchTop 2s linear infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    &:after {
+      animation: glitchBotom 2.5s linear infinite;
+      clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .sign {
     &-content {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sign {
+    &-content {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(1px, -1px);
+  }
+  4%,
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  62% {
+    transform: translate(6px, -1px) skew(-13deg);
+  }
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-1px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-1px, 0);
+  }
+  62% {
+    transform: translate(-11px, 3px) skew(21deg);
+  }
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(1px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-1px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(3deg);
   }
 }

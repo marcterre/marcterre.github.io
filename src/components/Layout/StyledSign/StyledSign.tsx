@@ -10,7 +10,9 @@ export const StyledSign = (props: StyledSignProps) => {
     <div className="sign">
       <div className="sign-wrapper">
         <div className="sign-stroke-left" />
-        <div className="sign-content">{content}</div>
+        <div className="sign-content" title={content}>
+          {content}
+        </div>
         <div className="sign-stroke-right" />
       </div>
     </div>

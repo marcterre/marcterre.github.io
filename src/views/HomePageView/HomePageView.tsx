@@ -35,6 +35,7 @@ export const HomePageView = () => {
 
   return (
     <div className="home">
+      <div className="home-background-grid" />
       <LinkSection />
       <main>
         {isAuth && <p className="message-logged-in">Logged in!</p> && (

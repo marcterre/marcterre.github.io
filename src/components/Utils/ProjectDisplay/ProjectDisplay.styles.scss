@@ -78,6 +78,9 @@
     object-fit: contain;
     height: 17vh;
     margin: 0;
+    &:hover {
+      background-color: black;
+    }
   }
 
   &-button-wrapper {

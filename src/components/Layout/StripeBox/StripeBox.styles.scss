@@ -1,7 +1,8 @@
 .box {
   display: grid;
   width: 100%;
-  height: 100%;
+  min-width: 50vw;
+  align-items: center;
   border: 2px solid var(--color-light-blue-white-80);
   box-shadow: inset 0 0 15px var(--color-light-blue-white-80);
   border-radius: 3px;
@@ -14,6 +15,7 @@
     padding: 0 1rem;
     &-description {
       margin: 0;
+      font-size: 0.9rem;
     }
   }
 
@@ -21,7 +23,6 @@
     border-top: 2px solid var(--color-light-blue-white-80);
     align-self: flex-end;
     display: flex;
-    height: 50%;
     width: 100%;
     gap: 0.5rem;
 
@@ -36,6 +37,7 @@
       padding: 0 1rem 0 0.7rem;
       border-right: 2px solid var(--color-light-blue-white-80);
       width: 40%;
+
       &-content {
         font-family: Verdana, Tahoma, sans-serif;
         letter-spacing: 2px;
@@ -50,6 +52,7 @@
       justify-content: space-evenly;
       gap: 0.5rem;
       width: 50%;
+
       &-elements {
         background-color: var(--color-light-blue-white);
         height: 100%;
@@ -62,7 +65,7 @@
   .box {
     &-middle {
       &-description {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         padding: 0.5rem 0;
       }
     }
@@ -71,6 +74,9 @@
         font-size: 0.8rem;
         width: inherit;
         padding: 0.5rem;
+        &-content {
+          font-size: 0.9rem;
+        }
       }
       &-right {
         width: 70%;

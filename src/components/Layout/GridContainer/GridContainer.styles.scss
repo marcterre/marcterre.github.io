@@ -3,6 +3,7 @@
     grid-template-columns: repeat(3, auto);
     justify-content: space-evenly;
     row-gap: 1rem;
+    min-width: 80vw;
   }
 }
 
