@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        softGrey30: "rgba(203, 213, 225, 0.3)",
+        softGrey70: "rgba(203, 213, 225, 0.7)",
+        aswadBlack: "rgb(24, 24, 30)",
+        nightSky: "#15151b",
+      },
       keyframes: {
         rotate3D: {
           "0%": { transform: "rotateY(0deg)" },
