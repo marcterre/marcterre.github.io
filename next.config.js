@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/nextjs",
+  basePath: "/marcterre.github.io",
+  assetPrefix: "/marcterre.github.io/",
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/i,
