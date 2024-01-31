@@ -1,0 +1,10 @@
+[
+  {
+    "title": "PocketBuilder",
+    "description": "A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
+    "techStack": ["Next.js", "Cloudinary", "Styled Components"],
+    "link": "https://github.com/marcterre/capstone-project",
+    "isCurrentProject": true,
+    "tasks": ["Typescript Migration", "Database Implementation"]
+  }
+]
