@@ -22,7 +22,7 @@ const LinkComponent = () => {
 
   const links: LinkType[] = [
     {
-      url: "/projects",
+      url: "./projects",
       name: "Projects",
       isActive: isProjectsCurrentPath,
       icon: (
@@ -49,7 +49,7 @@ const LinkComponent = () => {
 
   return (
     <div className="flex justify-between">
-      <Link href="/">Home</Link>
+      <Link href="./">Home</Link>
       <div className="flex w-full justify-end gap-1 items-center">
         {links.map((link, index) => {
           const { url, name, isActive, icon } = link;
