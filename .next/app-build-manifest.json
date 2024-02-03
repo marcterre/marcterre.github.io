@@ -1,35 +1,35 @@
 {
   "pages": {
     "/_not-found": [
-      "static/chunks/webpack-d6072afc7b3ac658.js",
+      "static/chunks/webpack-01d30a7ed85e6df0.js",
       "static/chunks/fd9d1056-509a95a6ad31195a.js",
-      "static/chunks/472-de3cefb926c561af.js",
+      "static/chunks/472-5b5bcb514fbda5a0.js",
       "static/chunks/main-app-0ae6e7377970c719.js",
       "static/chunks/app/_not-found-c7555411b7b137ab.js"
     ],
     "/layout": [
-      "static/chunks/webpack-d6072afc7b3ac658.js",
+      "static/chunks/webpack-01d30a7ed85e6df0.js",
       "static/chunks/fd9d1056-509a95a6ad31195a.js",
-      "static/chunks/472-de3cefb926c561af.js",
+      "static/chunks/472-5b5bcb514fbda5a0.js",
       "static/chunks/main-app-0ae6e7377970c719.js",
-      "static/css/803e5df64d9bd0e1.css",
-      "static/chunks/app/layout-26725664b0285575.js"
-    ],
-    "/projects/page": [
-      "static/chunks/webpack-d6072afc7b3ac658.js",
-      "static/chunks/fd9d1056-509a95a6ad31195a.js",
-      "static/chunks/472-de3cefb926c561af.js",
-      "static/chunks/main-app-0ae6e7377970c719.js",
-      "static/chunks/569-488dbbfbe30cc3a8.js",
-      "static/chunks/app/projects/page-f85081513238d19d.js"
+      "static/css/b7d18b08f39990b2.css",
+      "static/chunks/app/layout-6fae801825a33d00.js"
     ],
     "/page": [
-      "static/chunks/webpack-d6072afc7b3ac658.js",
+      "static/chunks/webpack-01d30a7ed85e6df0.js",
       "static/chunks/fd9d1056-509a95a6ad31195a.js",
-      "static/chunks/472-de3cefb926c561af.js",
+      "static/chunks/472-5b5bcb514fbda5a0.js",
       "static/chunks/main-app-0ae6e7377970c719.js",
-      "static/chunks/569-488dbbfbe30cc3a8.js",
+      "static/chunks/569-37c8064cc52d2d33.js",
       "static/chunks/app/page-fa74302a4a70ff91.js"
+    ],
+    "/projects/page": [
+      "static/chunks/webpack-01d30a7ed85e6df0.js",
+      "static/chunks/fd9d1056-509a95a6ad31195a.js",
+      "static/chunks/472-5b5bcb514fbda5a0.js",
+      "static/chunks/main-app-0ae6e7377970c719.js",
+      "static/chunks/569-37c8064cc52d2d33.js",
+      "static/chunks/app/projects/page-f85081513238d19d.js"
     ]
   }
 }

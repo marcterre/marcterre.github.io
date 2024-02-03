@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/marcterre.github.io",
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/i,
