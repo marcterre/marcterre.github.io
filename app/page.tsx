@@ -1,7 +1,7 @@
-import Link from "next/link";
 import HeaderComponent from "../components/header/HeaderComponent";
 import GithubIcon from "../public/assets/github.svg";
 import LinkedinIcon from "../public/assets/linkedin.svg";
+import LinkComponent from "@/components/base/LinkComponent";
 
 export default function Home() {
   type SocialMedaLinkType = {
@@ -42,7 +42,7 @@ export default function Home() {
             sit officiis distinctio quisquam id nam eos dolor totam iure
             incidunt, alias vel.
           </p>
-          <div className="border-t border-softGrey30 w-20 mx-auto" />
+          <div className="border-t border-softGrey30 w-80 mx-auto" />
           <div className="w-full grid gap-3">
             <h2 className="text-softGrey70">Connect with me on</h2>
             <ul className="flex gap-2">
@@ -51,14 +51,12 @@ export default function Home() {
 
                 return (
                   <li key={name} className="px-1">
-                    <Link
-                      className="flex gap-1 text-white"
-                      href={url}
-                      target="_blank"
-                    >
-                      {getSocialMediaIcon(name)}
-                      {name}
-                    </Link>
+                    <LinkComponent
+                      name={name}
+                      hasIcon={true}
+                      icon={getSocialMediaIcon(name)}
+                      url={url}
+                    />
                   </li>
                 );
               })}

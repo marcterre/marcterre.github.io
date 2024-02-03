@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        linkBackgroundAnimated:
+          "url('https://media.giphy.com/media/3ohs84asTmM9VC8r5u/giphy.gif')",
+        linkBackground: "url('/public/assets/linkBackground.png')",
+      },
       colors: {
         softGrey30: "rgba(203, 213, 225, 0.3)",
         softGrey70: "rgba(203, 213, 225, 0.7)",
