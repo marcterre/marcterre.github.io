@@ -1,6 +1,6 @@
 1:HL["/marcterre.github.io/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-2:HL["/marcterre.github.io/_next/static/css/eea884fc826ad749.css","style",{"crossOrigin":""}]
-0:["AL7RxyE46mKDzS1fHMW_n",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/marcterre.github.io/_next/static/css/eea884fc826ad749.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+2:HL["/marcterre.github.io/_next/static/css/803e5df64d9bd0e1.css","style",{"crossOrigin":""}]
+0:["WKMTDNdc_Ii-Ul90WM_-u",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/marcterre.github.io/_next/static/css/803e5df64d9bd0e1.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:I[6954,[],""]
 6:I[7264,[],""]
 8:{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"}
