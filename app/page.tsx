@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="w-full h-full">
       <HeaderComponent title="Marc Terre" />
-      <div className="w-full h-full grid justify-items-center">
+      <div className="sm:mx-80 h-full grid justify-items-center">
         <div className="sm:py-20 py-16 grid gap-10">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis

@@ -34,21 +34,21 @@ const LinkComponent = () => {
         />
       ),
     },
-    {
-      name: "Theme",
-      icon: (
-        <SvgComponent
-          variant="moon"
-          width="20"
-          height="20"
-          fill="rgba(203, 213, 225, 0.7)"
-        />
-      ),
-    },
+    // {
+    //   name: "Theme",
+    //   icon: (
+    //     <SvgComponent
+    //       variant="moon"
+    //       width="20"
+    //       height="20"
+    //       fill="rgba(203, 213, 225, 0.7)"
+    //     />
+    //   ),
+    // },
   ];
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between sm:px-4">
       <Link href="./">Home</Link>
       <div className="flex w-full justify-end gap-1 items-center">
         {links.map((link, index) => {

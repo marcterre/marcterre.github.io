@@ -22,7 +22,7 @@ const ProjectListWrapperComponent = function ({
 }: ProjectListWrapperComponentProps) {
   return (
     projects.length > 0 && (
-      <div className="grid gap-8 pt-16">
+      <div className="grid gap-8 pt-12">
         <h2 className="text-center font-bold text-white">{title}</h2>
         <ul
           className={`grid gap-8 ${

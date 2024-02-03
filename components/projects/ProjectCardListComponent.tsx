@@ -37,7 +37,7 @@ const ProjectCardListComponent = function ({
         )}
         {tasks && isCurrenProject && (
           <>
-            <div className="border-t border-softGrey30 w-20 mx-auto my-4" />
+            <div className="border-t border-softGrey30 w-80 mx-auto my-4" />
             <h3 className="font-bold text-sm">Planned implementations:</h3>
             <ul>
               {tasks.map((task) => {

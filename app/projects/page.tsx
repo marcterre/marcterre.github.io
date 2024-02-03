@@ -28,7 +28,7 @@ const ProjectPage = function () {
   return (
     <main className="w-full h-full">
       <HeaderComponent title="Projects" />
-      <div className="w-full h-full grid justify-items-center">
+      <div className="sm:mx-80 h-full grid justify-items-center">
         {currentProjects.length > 0 && (
           <ProjectListWrapperComponent
             projects={currentProjects}
@@ -44,7 +44,7 @@ const ProjectPage = function () {
           />
         ) : (
           <div className="py-16 text-sm text-softGrey30">
-            Many more exciting projects incoming!
+            More exciting projects planned!
           </div>
         )}
       </div>
