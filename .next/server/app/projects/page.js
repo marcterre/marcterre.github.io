@@ -309,7 +309,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"title":"PocketBuilder","description":"A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.","techStack":["Next.js","Cloudinary","Styled Components"],"link":"https://github.com/marcterre/capstone-project","isCurrentProject":true,"tasks":["Typescript migration","Database implementation"]},{"title":"daliar - portfolio","description":"A portfolio website for a character designer and illustrator. Showcasing her work and providing a upload form to add new images to the database.","techStack":["Next.js","Cloudinary","TailwindCSS","MongoDB","Auth0"],"link":"https://github.com/marcterre/daliar.github.io","isCurrentProject":true,"tasks":["Enable upload of images to the database","UI/UX design"]}]');
+module.exports = JSON.parse('[{"title":"PocketBuilder","description":"Capstone project while at neuefische. A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.","techStack":["Next.js","Cloudinary","Styled Components"],"link":"https://github.com/marcterre/capstone-project","isCurrentProject":true,"tasks":["Typescript migration","Database implementation"]},{"title":"daliar - portfolio","description":"A portfolio website for a character designer and illustrator. Showcasing her work and providing a upload form to add new images to the database.","techStack":["Next.js","Cloudinary","TailwindCSS","MongoDB","Auth0"],"link":"https://github.com/marcterre/daliar.github.io","isCurrentProject":true,"tasks":["Enable upload of images to the database","UI/UX design"]}]');
 
 /***/ })
 
