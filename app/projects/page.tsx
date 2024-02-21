@@ -1,4 +1,5 @@
-import HeaderComponent from "../../components/header/HeaderComponent";
+import FooterComponent from "@/components/layout/FooterComponent";
+import HeaderComponent from "../../components/layout/HeaderComponent";
 import projectsData from "../../public/assets/projects.json";
 import ProjectListWrapperComponent from "@/components/projects/ProjectListWrapperComponent";
 
@@ -23,29 +24,32 @@ const ProjectPage = function () {
   });
 
   return (
-    <main className="w-full h-full">
-      <HeaderComponent title="Projects" />
-      <div className="sm:mx-auto h-full grid justify-items-center">
-        {currentProjects.length > 0 && (
-          <ProjectListWrapperComponent
-            projects={currentProjects}
-            isCurrenProject={true}
-            title="Currently working on"
-          />
-        )}
-        {projects.length > 0 && notCurrentProjects.length > 0 ? (
-          <ProjectListWrapperComponent
-            projects={projects}
-            isCurrenProject={false}
-            title="All projects"
-          />
-        ) : (
-          <div className="py-16 text-sm text-softGrey30">
-            More exciting projects planned!
-          </div>
-        )}
-      </div>
-    </main>
+    <>
+      <main className="w-full h-full">
+        <HeaderComponent title="Projects" />
+        <div className="sm:mx-auto h-full grid justify-items-center">
+          {currentProjects.length > 0 && (
+            <ProjectListWrapperComponent
+              projects={currentProjects}
+              isCurrenProject={true}
+              title="Currently working on"
+            />
+          )}
+          {projects.length > 0 && notCurrentProjects.length > 0 ? (
+            <ProjectListWrapperComponent
+              projects={projects}
+              isCurrenProject={false}
+              title="All projects"
+            />
+          ) : (
+            <div className="py-16 text-sm text-softGrey40">
+              More exciting projects planned!
+            </div>
+          )}
+        </div>
+      </main>
+      <FooterComponent customClass="max-w-4xl" />
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ const config: Config = {
         linkBackground: "url('/public/assets/linkBackground.png')",
       },
       colors: {
-        softGrey30: "rgba(203, 213, 225, 0.3)",
+        softGrey40: "rgba(203, 213, 225, 0.4)",
         softGrey70: "rgba(203, 213, 225, 0.7)",
         aswadBlack: "rgb(24, 24, 30)",
         nightSky: "#15151b",
