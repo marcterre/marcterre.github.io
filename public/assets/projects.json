@@ -5,6 +5,14 @@
     "techStack": ["Next.js", "Cloudinary", "Styled Components"],
     "link": "https://github.com/marcterre/capstone-project",
     "isCurrentProject": true,
-    "tasks": ["Typescript Migration", "Database Implementation"]
+    "tasks": ["Typescript migration", "Database implementation"]
+  },
+  {
+    "title": "daliar - portfolio",
+    "description": "A portfolio website for a character designer and illustrator. Showcasing her work and providing a upload form to add new images to the database.",
+    "techStack": ["Next.js", "Cloudinary", "TailwindCSS", "MongoDB", "Auth0"],
+    "link": "https://github.com/marcterre/daliar.github.io",
+    "isCurrentProject": true,
+    "tasks": ["Enable upload of images to the database", "UI/UX design"]
   }
 ]

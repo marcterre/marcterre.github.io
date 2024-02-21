@@ -1,8 +1,5 @@
-import Link from "next/link";
 import HeaderComponent from "../../components/header/HeaderComponent";
-import TagComponent from "../../components/layout/TagComponent";
 import projectsData from "../../public/assets/projects.json";
-import ProjectCardListComponent from "@/components/projects/ProjectCardListComponent";
 import ProjectListWrapperComponent from "@/components/projects/ProjectListWrapperComponent";
 
 type ProjectType = {
@@ -28,7 +25,7 @@ const ProjectPage = function () {
   return (
     <main className="w-full h-full">
       <HeaderComponent title="Projects" />
-      <div className="sm:mx-80 h-full grid justify-items-center">
+      <div className="sm:mx-auto h-full grid justify-items-center">
         {currentProjects.length > 0 && (
           <ProjectListWrapperComponent
             projects={currentProjects}

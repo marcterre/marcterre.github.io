@@ -22,11 +22,15 @@ const ProjectListWrapperComponent = function ({
 }: ProjectListWrapperComponentProps) {
   return (
     projects.length > 0 && (
-      <div className="grid gap-8 pt-12">
+      <div
+        className={`grid gap-8 pt-12 ${
+          projects.length > 1 ? "max-w-4xl" : "max-w-md"
+        }`}
+      >
         <h2 className="text-center font-bold text-white">{title}</h2>
         <ul
           className={`grid gap-8 ${
-            isCurrenProject ? "justify-center sm:mx-40" : "sm:grid-cols-2"
+            projects.length > 1 ? "sm:grid-cols-2" : "justify-center"
           }`}
         >
           {projects.map((project) => {

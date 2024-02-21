@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeaderComponent from "../components/header/HeaderComponent";
 import GithubIcon from "../public/assets/github.svg";
 import LinkedinIcon from "../public/assets/linkedin.svg";
@@ -34,14 +35,32 @@ export default function Home() {
   return (
     <main className="w-full h-full">
       <HeaderComponent title="Marc Terre" />
-      <div className="sm:mx-80 h-full grid justify-items-center">
-        <div className="sm:py-20 py-16 grid gap-10">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
-            perferendis ex voluptatem, quidem consequuntur laborum et pariatur
-            sit officiis distinctio quisquam id nam eos dolor totam iure
-            incidunt, alias vel.
-          </p>
+      <div className="max-w-md sm:mx-auto h-full grid justify-items-center">
+        <div className=" sm:py-10 py-10 grid gap-10">
+          <div className="grid gap-5 ">
+            <p>Hi, i am Marc Terre, a passionate Frontend Developer.</p>
+            <div>
+              Currently working on several projects you can find on my{" "}
+              <Link href="/projects" className="text-white">
+                projects section
+              </Link>
+              .
+            </div>
+            <p>
+              It was a year of a pandemic that changed my world. Seeking new
+              challenges, I decided to learn how to code and discovered the
+              endless possibilities it offered for creativity and
+              problem-solving. Coding has become my passion and I am excited to
+              continue learning and growing in this field.
+            </p>
+            <p>
+              You are interested in working with me? Feel free to contact me.
+            </p>
+            <p>
+              You want to make coding your profession but don't know where to
+              start? Feel free to contact me as well, i'll help where i can.
+            </p>
+          </div>
           <div className="border-t border-softGrey30 w-80 mx-auto" />
           <div className="w-full grid gap-3">
             <h2 className="text-softGrey70">Connect with me on</h2>
