@@ -6,7 +6,7 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Marc Tere",
+  title: "Marc Terre - Frontend Developer",
   description: "Marc's Portfolio",
 };
 
