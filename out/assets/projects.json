@@ -1,10 +1,16 @@
 [
   {
     "title": "PocketBuilder",
-    "description": "A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
+    "description": "My Capstone project while at neuefische. A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
     "techStack": ["Next.js", "Cloudinary", "Styled Components"],
-    "link": "https://github.com/marcterre/capstone-project",
+    "link": "https://github.com/marcterre/capstone-project"
+  },
+  {
+    "title": "daliar - portfolio",
+    "description": "A portfolio website for a character designer and illustrator. Showcasing her work and providing a upload form to add new images to the database.",
+    "techStack": ["Next.js", "Cloudinary", "TailwindCSS", "MongoDB", "Auth0"],
+    "link": "https://github.com/marcterre/daliar.github.io",
     "isCurrentProject": true,
-    "tasks": ["Typescript Migration", "Database Implementation"]
+    "tasks": ["Enable upload of images to the database", "UI/UX design"]
   }
 ]

@@ -1,11 +1,9 @@
 [
   {
     "title": "PocketBuilder",
-    "description": "Capstone project while at neuefische. A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
+    "description": "My Capstone project while at neuefische. A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
     "techStack": ["Next.js", "Cloudinary", "Styled Components"],
-    "link": "https://github.com/marcterre/capstone-project",
-    "isCurrentProject": true,
-    "tasks": ["Typescript migration", "Database implementation"]
+    "link": "https://github.com/marcterre/capstone-project"
   },
   {
     "title": "daliar - portfolio",

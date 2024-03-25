@@ -57,7 +57,7 @@ const SvgComponent = function ({
       height={height}
       fill={isHovered ? hoverFilling : fill}
       stroke={stroke}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
     >
       <title>{variant}</title>
       <path d={paths[variant].path} />

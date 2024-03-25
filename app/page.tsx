@@ -38,7 +38,7 @@ export default function Home() {
       <main className="w-full h-full">
         <HeaderComponent title="Marc Terre" />
         <div className="max-w-md sm:mx-auto h-full grid justify-items-center">
-          <div className=" sm:py-10 py-10 grid gap-10">
+          <div className=" sm:py-16 py-10 grid gap-10">
             <div className="grid gap-5 ">
               <p>Hi, i am Marc Terre, a passionate Frontend Developer.</p>
               <div>
@@ -56,11 +56,11 @@ export default function Home() {
                 to continue learning and growing in this field.
               </p>
               <p>
-                You are interested in working with me? Feel free to contact me.
+                You want to make coding your profession but don't know where to
+                start? Feel free to contact me, i'll help where i can!
               </p>
               <p>
-                You want to make coding your profession but don't know where to
-                start? Feel free to contact me as well, i'll help where i can.
+                You are interested in working with me? Feel free to contact me.
               </p>
             </div>
             <div className="border-t border-softGrey30 w-80 mx-auto" />
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <FooterComponent customClass="max-w-md " />
+      <FooterComponent />
     </>
   );
 }

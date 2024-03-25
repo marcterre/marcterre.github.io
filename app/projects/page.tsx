@@ -35,11 +35,11 @@ const ProjectPage = function () {
               title="Currently working on"
             />
           )}
-          {projects.length > 0 && notCurrentProjects.length > 0 ? (
+          {notCurrentProjects.length > 0 ? (
             <ProjectListWrapperComponent
-              projects={projects}
+              projects={notCurrentProjects}
               isCurrenProject={false}
-              title="All projects"
+              title="Past projects"
             />
           ) : (
             <div className="py-16 text-sm text-softGrey40">

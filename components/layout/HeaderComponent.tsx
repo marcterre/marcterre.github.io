@@ -62,6 +62,7 @@ const HeaderComponent = ({ title }: HeaderComponentProps) => {
             const { url, name, isActive, icon } = link;
             return url ? (
               <LinkComponent
+                key={name}
                 url={url}
                 name={name!}
                 isActive={isActive!}
