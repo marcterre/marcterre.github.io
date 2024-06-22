@@ -7,18 +7,12 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      pinkShell: "#FE899D",
+    },
     extend: {
-      backgroundImage: {
-        linkBackgroundAnimated:
-          "url('https://media.giphy.com/media/3ohs84asTmM9VC8r5u/giphy.gif')",
-        linkBackground: "url('/public/assets/linkBackground.png')",
-      },
-      colors: {
-        softGrey30: "rgba(203, 213, 225, 0.3)",
-        softGrey40: "rgba(203, 213, 225, 0.4)",
-        softGrey70: "rgba(203, 213, 225, 0.7)",
-        aswadBlack: "rgb(24, 24, 30)",
-        nightSky: "#15151b",
+      borderWidth: {
+        "3": "3px",
       },
       keyframes: {
         rotate3D: {

@@ -23,15 +23,15 @@
     }
   },
   "include": [
-    "app/api/projects/route.js",
+    "pages/api/projects/route.js",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/api/demo/page.js",
-    "app/api/demo/page.js",
-    "app/api/projects/route.ts",
-    "app/api/projects/route.ts"
+    "pages/api/demo/page.js",
+    "pages/api/demo/page.js",
+    "pages/api/projects/route.ts",
+    "pages/api/projects/route.ts"
   ],
   "exclude": ["node_modules"]
 }
