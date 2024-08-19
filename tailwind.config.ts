@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        jetbrains: ["JetBrainsMonoRegular", "monospace"],
+      },
       backgroundImage: {
         linkBackgroundAnimated:
           "url('https://media.giphy.com/media/3ohs84asTmM9VC8r5u/giphy.gif')",
