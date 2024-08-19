@@ -1,5 +1,6 @@
 "use client";
 import { Project } from "@/types";
+import Link from "next/link";
 import { FunctionComponent } from "react";
 
 type ProjectsProps = {
@@ -11,17 +12,24 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
     <div className="h-[70vh]">
       <h2 className="pb-12 text-3xl flex-none">Projects</h2>
       <div className="w-full h-full overflow-hidden">
-        <div className="no-scrollbar grid content-start h-full overflow-y-auto pb-32 grid gap-12">
+        <div className="no-scrollbar grid content-start h-full overflow-y-auto pb-32 grid gap-8 md:gap-12">
           {projects.map((project) => (
-            <div key={project.id} className="p-4 border border-2 h-fit">
-              <h2 className="text-2xl font-bold">{project.title}</h2>
+            <Link
+              target="_blank"
+              href={project.url}
+              key={project.id}
+              className="p-4 border border-neutral-400/30 hover:border-white hover:text-white h-fit"
+            >
+              <h2 className="font-bold text-lg">{project.title}</h2>
               <p className="mt-4">{project.description}</p>
-              <ul className="mt-4 list-disc pl-5">
+              <ul className="mt-4 flex flex-wrap gap-4">
                 {project.techStack.map((stack: string, index: number) => (
-                  <li key={index}>{stack}</li>
+                  <li key={index} className="text-xs bg-purple-500/20 p-2">
+                    {stack}
+                  </li>
                 ))}
               </ul>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

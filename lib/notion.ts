@@ -13,6 +13,8 @@ export async function getAboutSection() {
     title: response.results[0].properties.name.title[0].text.content,
     description:
       response.results[0].properties.description.rich_text[0].text.content,
+    linkedin: response.results[0].properties.linkedin.url,
+    github: response.results[0].properties.github.url,
   };
 }
 
