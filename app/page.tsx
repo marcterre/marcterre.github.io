@@ -9,7 +9,9 @@ export default async function Home() {
   return (
     <div className="w-full h-full flex flex-col">
       <div className="h-[30vh] flex items-center justify-center">
-        <Markdown className="text-xl text-center">{data.description}</Markdown>
+        <Markdown className="md:text-xl text-base p-2 text-center">
+          {data.description}
+        </Markdown>
       </div>
       <Projects projects={projects} />
     </div>
