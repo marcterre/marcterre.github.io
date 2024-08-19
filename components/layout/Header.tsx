@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import LinkComponent from "../Link";
 
 type HeaderProps = {
   linkedin: string;
@@ -9,21 +10,9 @@ type HeaderProps = {
 const Header: FunctionComponent<HeaderProps> = ({ linkedin, github }) => {
   return (
     <div className="flex w-full gap-3">
-      <Link
-        href={linkedin}
-        target="_blank"
-        className="hover:text-white hover:underline text-sm  md:text-base"
-      >
-        Marc Terre
-      </Link>
+      <LinkComponent name="Marc Terre" url={linkedin} />
       <div>/</div>
-      <Link
-        href={github}
-        target="_blank"
-        className="hover:text-white hover:underline text-sm  md:text-base"
-      >
-        Web Developer
-      </Link>
+      <LinkComponent name="Web Developer" url={github} />
     </div>
   );
 };

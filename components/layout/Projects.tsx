@@ -24,7 +24,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
               <p className="mt-8">{project.description}</p>
               <ul className="mt-8 flex flex-wrap md:gap-4 gap-2.5">
                 {project.techStack.map((stack: string, index: number) => (
-                  <li key={index} className="text-xs bg-purple-500/20 p-2">
+                  <li key={index} className="text-xs bg-[#fa4580]/20 p-2">
                     {stack}
                   </li>
                 ))}
