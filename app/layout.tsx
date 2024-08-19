@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import Header from "@/components/layout/Header";
 import { getAboutSection } from "@/lib/notion";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default async function RootLayout({
       >
         <Header linkedin={data.linkedin} github={data.github} />
         {children}
+        <Footer />
       </body>
     </html>
   );
