@@ -2,13 +2,13 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="w-full">
+      <ul className="flex gap-8">
         <li>
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/projects">Posts</Link>
+          <Link href="/projects">Projects</Link>
         </li>
       </ul>
     </nav>
