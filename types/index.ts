@@ -4,4 +4,5 @@ export interface Project {
   description: string;
   techStack: string[];
   url: string;
+  isCurrentProject: boolean;
 }

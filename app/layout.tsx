@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Header from "@/components/layout/Header";
-import { getAboutSection } from "@/lib/notion";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,16 +16,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getAboutSection();
-
   return (
     <html lang="en">
       <body
-        className={`${inter.className} p-4 md:p-2 font-jetbrains mx-auto max-w-screen-sm h-screen overflow-hidden`}
+        className={`${inter.className} p-16 font-jetbrains w-screen h-screen `}
       >
-        <Header linkedin={data.linkedin} github={data.github} />
-        {children}
-        <Footer />
+        <div className="p-8 border border-[#f0f0f0] w-full h-full">
+          {children}
+        </div>
       </body>
     </html>
   );

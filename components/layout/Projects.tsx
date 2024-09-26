@@ -1,37 +1,39 @@
 "use client";
 import { Project } from "@/types";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
+import ProjectCard from "../ProjectCard";
 
 type ProjectsProps = {
   projects: Project[];
 };
 
 const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
+  const [currentProject, setCurrentProject] = useState(0);
+  const sortedProjects = projects.sort((a, b) => {
+    if (a.isCurrentProject) return 1;
+    else if (b.isCurrentProject) return -1;
+    else return 0;
+  });
   return (
-    <div className="h-[70vh]">
-      <h2 className="md:pb-12 pb-8 md:text-3xl text-xl flex-none">Projects</h2>
-      <div className="w-full h-full overflow-hidden">
-        <div className="scrollbar-custom grid content-start h-full overflow-y-auto pb-32 grid gap-8 md:gap-12">
-          {projects.map((project) => (
-            <Link
-              target="_blank"
-              href={project.url}
-              key={project.id}
-              className="p-4 mx-1 border border-neutral-400/30 hover:border-white hover:text-white h-fit"
-            >
-              <h2 className="font-bold text-lg">{project.title}</h2>
-              <p className="mt-8">{project.description}</p>
-              <ul className="mt-8 flex flex-wrap md:gap-4 gap-2.5">
-                {project.techStack.map((stack: string, index: number) => (
-                  <li key={index} className="text-xs bg-[#fa4580]/20 p-2">
-                    {stack}
-                  </li>
-                ))}
-              </ul>
-            </Link>
-          ))}
-        </div>
+    <div className="h-full w-1/2 pl-8">
+      <h2 className="mb-2">Projects</h2>
+      <div className="pt-16 ml-[89px]">
+        {sortedProjects.map((project, index) => {
+          console.log(project.title, index);
+          return (
+            <ProjectCard
+              titlePosition={{
+                top: "0",
+                right: "0",
+              }}
+              margin={`-${index * 5}px 0 0 -${index * 45}px`}
+              key={index}
+              title={project.title}
+              description={project.description}
+            />
+          );
+        })}
       </div>
     </div>
   );
