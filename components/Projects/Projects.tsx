@@ -1,22 +1,22 @@
-"use client";
 import { Project } from "@/types";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { ProjectCard } from ".";
+import ProjectCardsMobile from "./ProjectCardsMobile";
 
 type ProjectsProps = {
   projects: Project[];
 };
 
 const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
-  const [currentProject, setCurrentProject] = useState(0);
   const sortedProjects = projects.sort((a, b) => {
     if (a.isCurrentProject) return -1;
     else if (b.isCurrentProject) return 1;
     else return 0;
   });
   return (
-    <main className="w-full h-full relative z-10 flex-grow flex items-center justify-center">
-      <div className="grid grid-cols-2 gap-4 max-w-4xl w-full">
+    <div className="grid justify-center align-center">
+      <h2 className="relative top-[-20px] px-4 text-lg">Projects</h2>
+      <div className="grid md:grid-cols-2 gap-4 max-w-4xl w-full h-full md:h-fit no-scrollbar overflow-scroll">
         {sortedProjects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -27,8 +27,9 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
             projectUrl={project.url}
           />
         ))}
+        <ProjectCardsMobile projects={sortedProjects} />
       </div>
-    </main>
+    </div>
   );
 };
 

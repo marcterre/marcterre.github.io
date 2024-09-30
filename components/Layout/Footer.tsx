@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 flex justify-between items-center">
+    <footer className="fixed bottom-8 px-8 left-0 z-10 flex w-full justify-between items-center">
       <div className="flex space-x-4">
         <Link
           target="_blank"

@@ -28,7 +28,7 @@ export const CyberButton: FunctionComponent<FunctionComponentProps> = ({
 const Header: FunctionComponent<HeaderProps> = () => {
   return (
     <>
-      <header className="relative z-10">
+      <header className="z-10">
         <h1 className="text-4xl font-bold mb-2 animate-glitch">MARC TERRE</h1>
         <p className="text-xl text-pink-300">Web Developer</p>
       </header>

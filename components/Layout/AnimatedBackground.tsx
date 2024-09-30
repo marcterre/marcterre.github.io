@@ -9,6 +9,7 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
   children,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  let drops: number[] = [];
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,22 +18,22 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
     const fontSize = 10;
-    const columns = canvas.width / fontSize;
+    let columns = Math.floor(canvas.width / fontSize);
 
-    const drops: number[] = [];
-    for (let i = 0; i < columns; i++) {
-      drops[i] = 1;
-    }
+    // Initialize drops
+    const resetDrops = () => {
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    };
 
     const matrix =
       "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
 
     function draw() {
       if (!ctx || !canvas) return;
+
+      // Slightly translucent background for fade effect
       ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -56,8 +57,13 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      resetDrops(); // Reset drops based on new width
     };
 
+    // Initial resize setup
+    handleResize();
+
+    // Listen to resize events
     window.addEventListener("resize", handleResize);
 
     return () => {
