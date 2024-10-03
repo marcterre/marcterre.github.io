@@ -1,5 +1,5 @@
 "use client";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { Projects } from "./Projects";
 import {
   Education,

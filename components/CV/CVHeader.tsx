@@ -22,8 +22,6 @@ const CVHeader: FunctionComponent<CVHeaderProps> = ({
     navigator.clipboard.writeText(textToCopy);
   };
 
-  console.log("avatar", avatar);
-
   return (
     <section className="md:w-10/12 w-11/12 md:flex grid justify-between">
       <div className="mb-6 md:grid hidden">

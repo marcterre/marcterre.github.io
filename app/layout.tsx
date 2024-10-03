@@ -4,7 +4,6 @@ import "./globals.css";
 import React from "react";
 import { AnimatedBackground, Footer, Header } from "@/components/Layout";
 import Navigation from "@/components/Navigation";
-import { ContextProvider } from "@/components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
