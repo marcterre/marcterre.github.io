@@ -14,21 +14,18 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
     else return 0;
   });
   return (
-    <div className="grid justify-center align-center">
-      <h2 className="relative top-[-20px] px-4 text-lg">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-4 max-w-4xl w-full h-full md:h-fit no-scrollbar overflow-scroll">
-        {sortedProjects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            techStack={project.techStack}
-            isCurrentProject={project.isCurrentProject}
-            projectUrl={project.url}
-          />
-        ))}
-        <ProjectCardsMobile projects={sortedProjects} />
-      </div>
+    <div className="grid md:grid-cols-2 gap-4 max-w-4xl w-full h-full md:h-fit no-scrollbar overflow-scroll">
+      {sortedProjects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          title={project.title}
+          description={project.description}
+          techStack={project.techStack}
+          isCurrentProject={project.isCurrentProject}
+          projectUrl={project.url}
+        />
+      ))}
+      <ProjectCardsMobile projects={sortedProjects} />
     </div>
   );
 };

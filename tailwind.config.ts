@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: "var(--background)",
+      },
       fontFamily: {
         jetbrains: ["JetBrainsMonoRegular", "monospace"],
       },
@@ -21,6 +24,10 @@ const config: Config = {
           "linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         scanline: {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "0 100%" },
@@ -64,6 +71,7 @@ const config: Config = {
         scanline: "scanline 10s linear infinite",
         rotate3D: "rotate3D 7s linear infinite",
         glitch: "glitch 1s linear infinite",
+        fadeIn: "fadeIn 1s ease-in-out",
       },
     },
   },

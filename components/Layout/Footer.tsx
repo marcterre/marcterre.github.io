@@ -1,7 +1,11 @@
-import { Linkedin, Github, FileText } from "lucide-react";
+"use client";
+import { Linkedin, Github } from "lucide-react";
 import Link from "next/link";
+import { FunctionComponent } from "react";
 
-const Footer = () => {
+type FooterProps = {};
+
+const Footer: FunctionComponent<FooterProps> = () => {
   return (
     <footer className="fixed bottom-8 px-8 left-0 z-10 flex w-full justify-between items-center">
       <div className="flex space-x-4">
@@ -20,14 +24,6 @@ const Footer = () => {
           <Github size={24} />
         </Link>
       </div>
-      <Link
-        target="_blank"
-        href="/cv.pdf"
-        className="flex items-center space-x-2 text-pink-500 hover:text-pink-300 transition-colors duration-300"
-      >
-        <FileText size={24} />
-        <span>CV</span>
-      </Link>
     </footer>
   );
 };

@@ -13,7 +13,10 @@
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.15",
     "autoprefixer": "^10.4.16",
+    "date-fns": "^4.1.0",
     "framer-motion": "^11.8.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
     "lucide-react": "^0.446.0",
     "mongodb": "^6.2.0",
     "mongoose": "^8.0.0",
@@ -22,6 +25,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
+    "react-pdf": "^9.1.1",
     "swr": "^2.2.4",
     "tailwindcss": "^3.3.6"
   },
