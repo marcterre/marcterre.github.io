@@ -8,10 +8,10 @@ import {
 } from "@/types";
 import { Client } from "@notionhq/client";
 
-const notion = new Client({ auth: process.env.NOTION_SECRET });
+const notion = new Client({ auth: process.env.NEXT_PUBLIC_NOTION_SECRET });
 
 export async function getProjects(): Promise<Project[]> {
-  const databaseId = process.env.NOTION_DB_ID_PROJECTS as string;
+  const databaseId = process.env.NEXT_PUBLIC_NOTION_DB_ID_PROJECTS as string;
 
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -33,7 +33,7 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getProfileInfo(): Promise<ProfileInfo> {
-  const databaseId = process.env.NOTION_DB_ID_CV as string;
+  const databaseId = process.env.NEXT_PUBLIC_NOTION_DB_ID_CV as string;
 
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -66,7 +66,8 @@ export async function getProfileInfo(): Promise<ProfileInfo> {
 export async function getProfessionalExperience(): Promise<
   ProfessionalExperienceType[]
 > {
-  const databaseId = process.env.NOTION_DB_ID_PROFFESIONAL_EXPERIENCE as string;
+  const databaseId = process.env
+    .NEXT_PUBLIC_NOTION_DB_ID_PROFFESIONAL_EXPERIENCE as string;
 
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -88,7 +89,7 @@ export async function getProfessionalExperience(): Promise<
 }
 
 export async function getEducation(): Promise<Education[]> {
-  const databaseId = process.env.NOTION_DB_ID_EDUCATION as string;
+  const databaseId = process.env.NEXT_PUBLIC_NOTION_DB_ID_EDUCATION as string;
 
   const response = await notion.databases.query({
     database_id: databaseId,
