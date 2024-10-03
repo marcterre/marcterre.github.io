@@ -2,7 +2,7 @@
 import React, { FunctionComponent } from "react";
 import Divider from "./Divider";
 import { Education, ProfessionalExperienceType, ProfileInfo } from "@/types";
-import { Download } from "lucide-react";
+// import { Download } from "lucide-react";
 import CVHeader from "./CVHeader";
 import Skills from "./Skills";
 import ProfessionalExperience from "./ProfessionalExperience";

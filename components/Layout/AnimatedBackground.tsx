@@ -21,7 +21,6 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
     const fontSize = 10;
     let columns = Math.floor(canvas.width / fontSize);
 
-    // Initialize drops
     const resetDrops = () => {
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(1);
@@ -33,7 +32,6 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
     function draw() {
       if (!ctx || !canvas) return;
 
-      // Slightly translucent background for fade effect
       ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -57,13 +55,11 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      resetDrops(); // Reset drops based on new width
+      resetDrops();
     };
 
-    // Initial resize setup
     handleResize();
 
-    // Listen to resize events
     window.addEventListener("resize", handleResize);
 
     return () => {

@@ -1,4 +1,3 @@
-"use client";
 import { Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";

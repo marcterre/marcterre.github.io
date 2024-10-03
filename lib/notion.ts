@@ -1,4 +1,4 @@
-import { Education, ProfessionalExperience, ProfileInfo } from "@/types";
+import { Education, ProfessionalExperienceType, ProfileInfo } from "@/types";
 import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
@@ -57,7 +57,7 @@ export async function getProfileInfo(): Promise<ProfileInfo> {
 }
 
 export async function getProfessionalExperience(): Promise<
-  ProfessionalExperience[]
+  ProfessionalExperienceType[]
 > {
   const databaseId = process.env.NOTION_DB_ID_PROFFESIONAL_EXPERIENCE as string;
 
@@ -75,7 +75,7 @@ export async function getProfessionalExperience(): Promise<
       activities: page.properties.activities.multi_select.map(
         (item) => item.name
       ),
-    } as ProfessionalExperience;
+    } as ProfessionalExperienceType;
   });
 }
 
