@@ -35,13 +35,15 @@ const CVHeader: FunctionComponent<CVHeaderProps> = ({
         <LinkComponent url={github} icon={<ExternalLink size={12} />} />
         <LinkComponent url={linkedIn} icon={<ExternalLink size={12} />} />
       </div>
-      <div className="grid gap-4">
-        <Avatar size="md" src={avatar} />
-        <span className="flex items-center gap-2 mb-6 md:mb-0">
-          <MapPin size={16} />
-          {place}
-        </span>
-      </div>
+      {avatar && (
+        <div className="grid gap-4">
+          <Avatar size="md" src={avatar} />
+          <span className="flex items-center gap-2 mb-6 md:mb-0">
+            <MapPin size={16} />
+            {place}
+          </span>
+        </div>
+      )}
       <div className="grid md:hidden gap-4">
         <p
           className="flex items-center gap-2 cursor-pointer"
