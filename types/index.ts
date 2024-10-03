@@ -43,3 +43,30 @@ export interface ProfessionalExperienceType {
 }
 
 export type ViewType = "projects" | "cv";
+
+export interface NotionPage {
+  id: string;
+  properties: Record<string, any>;
+}
+
+export interface NotionRichText {
+  text: { content: string; link?: { url: string } };
+  plain_text: string;
+}
+
+export interface NotionMultiSelect {
+  name: string;
+}
+
+export interface NotionCheckbox {
+  checkbox: boolean;
+}
+
+export interface NotionDate {
+  start?: string;
+  end?: string;
+}
+
+export interface NotionFile {
+  name: string;
+}

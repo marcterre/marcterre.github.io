@@ -1,9 +1,16 @@
-import { Education, ProfessionalExperienceType, ProfileInfo } from "@/types";
+import {
+  Education,
+  NotionMultiSelect,
+  NotionPage,
+  ProfessionalExperienceType,
+  ProfileInfo,
+  Project,
+} from "@/types";
 import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 
-export async function getProjects() {
+export async function getProjects(): Promise<Project[]> {
   const databaseId = process.env.NOTION_DB_ID_PROJECTS as string;
 
   const response = await notion.databases.query({
@@ -11,15 +18,16 @@ export async function getProjects() {
   });
 
   return response.results.map((page) => {
+    const properties = (page as NotionPage).properties;
     return {
       id: page.id,
-      title: page.properties.name.title[0].text.content,
-      description: page.properties.description?.rich_text[0]?.text.content,
-      techStack: page.properties.tech_stack.multi_select.map(
-        (item) => item.name
+      title: properties.name.title[0].text.content,
+      description: properties.description?.rich_text[0]?.text.content,
+      techStack: properties.tech_stack.multi_select.map(
+        (item: NotionMultiSelect) => item.name
       ),
-      url: page.properties.url.url,
-      isCurrentProject: page.properties.is_current_project.checkbox,
+      url: properties.url.url,
+      isCurrentProject: properties.is_current_project.checkbox,
     };
   });
 }
@@ -31,28 +39,27 @@ export async function getProfileInfo(): Promise<ProfileInfo> {
     database_id: databaseId,
   });
 
+  const properties = (response.results[0] as NotionPage).properties;
+
   return {
     id: response.results[0].id,
-    name: response.results[0].properties.name.title[0].plain_text,
-    email: response.results[0].properties.email.email,
-    avatar: response.results[0].properties.avatar.files[0].name,
-    profession:
-      response.results[0].properties.profession.rich_text[0].plain_text,
-    linkedIn: response.results[0].properties.linkedin.url,
-    github: response.results[0].properties.github.url,
-    website: response.results[0].properties.website.url,
-    place: response.results[0].properties.place.rich_text[0].plain_text,
-    motivation:
-      response.results[0].properties.motivation.rich_text[0].plain_text,
-    skills: response.results[0].properties.skills.multi_select.map(
-      (item) => item.name
+    name: properties.name.title[0].plain_text,
+    email: properties.email.email,
+    avatar: properties.avatar.files[0].name,
+    profession: properties.profession.rich_text[0].plain_text,
+    linkedIn: properties.linkedin.url,
+    github: properties.github.url,
+    website: properties.website.url,
+    place: properties.place.rich_text[0].plain_text,
+    motivation: properties.motivation.rich_text[0].plain_text,
+    skills: properties.skills.multi_select.map(
+      (item: NotionMultiSelect) => item.name
     ),
-    languages: response.results[0].properties.languages.multi_select.map(
-      (item) => item.name
+    languages: properties.languages.multi_select.map(
+      (item: NotionMultiSelect) => item.name
     ),
-    availability: response.results[0].properties.availability.date?.start || "",
-    salaryPreference:
-      response.results[0].properties["salary preference"].number,
+    availability: properties.availability.date?.start || "",
+    salaryPreference: properties["salary preference"].number,
   };
 }
 
@@ -66,14 +73,15 @@ export async function getProfessionalExperience(): Promise<
   });
 
   return response.results.map((page) => {
+    const properties = (page as NotionPage).properties;
     return {
       id: page.id,
-      company: page.properties.company.title[0].plain_text,
-      profession: page.properties.profession.rich_text[0].plain_text,
-      startDate: page.properties.period.date?.start || "",
-      endDate: page.properties.period.date?.end || "",
-      activities: page.properties.activities.multi_select.map(
-        (item) => item.name
+      company: properties.company.title[0].plain_text,
+      profession: properties.profession.rich_text[0].plain_text,
+      startDate: properties.period.date?.start || "",
+      endDate: properties.period.date?.end || "",
+      activities: properties.activities.multi_select.map(
+        (item: NotionMultiSelect) => item.name
       ),
     } as ProfessionalExperienceType;
   });
@@ -87,13 +95,16 @@ export async function getEducation(): Promise<Education[]> {
   });
 
   return response.results.map((page) => {
+    const properties = (page as NotionPage).properties;
     return {
       id: page.id,
       type: "Education",
-      institute: page.properties.institute.title[0]?.plain_text,
-      startDate: page.properties.period.date?.start,
-      endDate: page.properties.period.date?.end,
-      topics: page.properties.topics.multi_select.map((item) => item.name),
+      institute: properties.institute.title[0]?.plain_text,
+      startDate: properties.period.date?.start,
+      endDate: properties.period.date?.end,
+      topics: properties.topics.multi_select.map(
+        (item: NotionMultiSelect) => item.name
+      ),
     };
   });
 }
