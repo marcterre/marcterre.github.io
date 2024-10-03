@@ -8,26 +8,70 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        linkBackgroundAnimated:
-          "url('https://media.giphy.com/media/3ohs84asTmM9VC8r5u/giphy.gif')",
-        linkBackground: "url('/public/assets/linkBackground.png')",
-      },
       colors: {
-        softGrey30: "rgba(203, 213, 225, 0.3)",
-        softGrey40: "rgba(203, 213, 225, 0.4)",
-        softGrey70: "rgba(203, 213, 225, 0.7)",
-        aswadBlack: "rgb(24, 24, 30)",
-        nightSky: "#15151b",
+        background: "var(--background)",
+      },
+      fontFamily: {
+        jetbrains: ["JetBrainsMonoRegular", "monospace"],
+      },
+      backgroundSize: {
+        scanline: "100% 4px",
+      },
+      backgroundImage: {
+        "cyberpunk-radial":
+          "radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%)",
+        "cyberpunk-linear":
+          "linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        scanline: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "0 100%" },
+        },
         rotate3D: {
           "0%": { transform: "rotateY(0deg)" },
           "100%": { transform: "rotateY(360deg)" },
         },
+        glitch: {
+          "0%": {
+            textShadow:
+              "0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "14%": {
+            textShadow:
+              "0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "15%": {
+            textShadow:
+              "-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "49%": {
+            textShadow:
+              "-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "50%": {
+            textShadow:
+              "0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "99%": {
+            textShadow:
+              "0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+          "100%": {
+            textShadow:
+              "-0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75)",
+          },
+        },
       },
       animation: {
+        scanline: "scanline 10s linear infinite",
         rotate3D: "rotate3D 7s linear infinite",
+        glitch: "glitch 1s linear infinite",
+        fadeIn: "fadeIn 1s ease-in-out",
       },
     },
   },
