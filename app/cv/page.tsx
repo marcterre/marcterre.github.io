@@ -6,6 +6,7 @@ import {
 } from "@/lib/notion";
 
 export default async function Home() {
+  console.log("example");
   const profileInformation = await getProfileInfo();
   const professionalExperience = await getProfessionalExperience();
   const education = await getEducation();
