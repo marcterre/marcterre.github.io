@@ -1,4 +1,4 @@
-import MainSection from "@/components/MainSection";
+import MainSection from "@/components/Layout/MainSection";
 import { getProjects } from "@/lib/notion";
 
 export default async function Home() {
