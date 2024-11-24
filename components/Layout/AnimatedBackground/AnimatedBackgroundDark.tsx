@@ -69,7 +69,7 @@ const AnimatedBackgroundDark: FunctionComponent<
   }, []);
 
   return (
-    <div className="bg-black absolute overflow-hidden relative h-screen w-screen text-pink-500 flex flex-col justify-between p-8 overflow-hidden relative">
+    <div className="bg-black absolute overflow-hidden relative h-screen w-screen text-pink-500 flex flex-col justify-between p-6 md:p-8 overflow-hidden relative">
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-cyberpunk-radial pointer-events-none z-1"></div>
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-cyberpunk-linear bg-scanline animate-scanline pointer-events-none z-2"></div>
