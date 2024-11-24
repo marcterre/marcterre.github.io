@@ -64,7 +64,7 @@ const ProjectCardsMobile: FunctionComponent<ProjectCardsMobileProps> = ({
     <div className="md:hidden block overflow-hidden w-full grid content-center items-center justify-center">
       {projects[currentIndex].isCurrentProject && (
         <p
-          className={`absolute top-16 left-4 text-pink-400 text-sm font-semibold transition-opacity duration-100 ${
+          className={`absolute top-14 left-4 text-sm font-semibold transition-opacity duration-100 ${
             fadeIn ? "opacity-100" : "opacity-0"
           }`}
         >
