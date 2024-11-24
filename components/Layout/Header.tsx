@@ -28,8 +28,10 @@ const Header: FunctionComponent<HeaderProps> = () => {
   return (
     <>
       <header className="z-10">
-        <h1 className="text-4xl font-bold mb-2 animate-glitch">MARC TERRE</h1>
-        <h2 className="text-xl">Web Developer</h2>
+        <h1 className="text-3xl md:text-4xl font-bold mb-2 animate-glitch">
+          MARC TERRE
+        </h1>
+        <h2 className="text-lg md:text-xl">Web Developer</h2>
       </header>
     </>
   );

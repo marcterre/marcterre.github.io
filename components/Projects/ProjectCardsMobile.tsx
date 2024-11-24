@@ -64,7 +64,7 @@ const ProjectCardsMobile: FunctionComponent<ProjectCardsMobileProps> = ({
     <div className="md:hidden block overflow-hidden w-full grid content-center items-center justify-center">
       {projects[currentIndex].isCurrentProject && (
         <p
-          className={`absolute top-14 left-4 text-sm font-semibold transition-opacity duration-100 ${
+          className={`absolute top-16 left-4 text-xs font-semibold transition-opacity duration-100 ${
             fadeIn ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -93,14 +93,14 @@ const ProjectCardsMobile: FunctionComponent<ProjectCardsMobileProps> = ({
                 <div className="grid content-between h-full gap-4">
                   <div>
                     <div className="flex justify-between items-center mb-4">
-                      <h3 className="text-lg font-semibold">{project.title}</h3>
+                      <h3 className="text-md font-semibold">{project.title}</h3>
                       <ExternalLink size={20} className="text-pink-400" />
                     </div>
-                    <p className="text-pink-300 min-h-[75px]">
+                    <p className="text-sm text-pink-300 min-h-[75px]">
                       {project.description}
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="text-sm flex flex-wrap gap-2">
                     {project.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}

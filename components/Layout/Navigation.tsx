@@ -13,7 +13,7 @@ const Navigation = () => {
           <a
             href={title === "CV" ? "/cv" : "/"}
             key={index}
-            className={`text-lg py-2 cursor-pointer ${
+            className={`text-md md:text-lg py-2 cursor-pointer ${
               isCurrentView ? "underline" : ""
             } hover:underline`}
           >
