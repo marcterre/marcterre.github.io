@@ -15,7 +15,7 @@ const Navigation = () => {
             key={index}
             className={`text-lg py-2 cursor-pointer ${
               isCurrentView ? "underline" : ""
-            } hover:underline hover:bg-pink-900 hover:bg-opacity-30`}
+            } hover:underline`}
           >
             {title}
           </a>
@@ -25,4 +25,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export { Navigation };

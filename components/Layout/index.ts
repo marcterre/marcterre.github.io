@@ -1,6 +1,4 @@
-import AnimatedBackground from "./AnimatedBackground";
-import Footer from "./Footer";
-import Header from "./Header";
-import Navigation from "./Navigation";
-
-export { AnimatedBackground, Footer, Header, Navigation };
+export { Navigation } from "./Navigation";
+export { Footer } from "./Footer";
+export { AnimatedBackground } from "./AnimatedBackground";
+export { Header } from "./Header";

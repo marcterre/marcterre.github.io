@@ -1,6 +1,7 @@
 import { Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import ThemeChanger from "../ThemeChanger";
 
 type FooterProps = {};
 
@@ -11,20 +12,21 @@ const Footer: FunctionComponent<FooterProps> = () => {
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/marcterre/"
-          className="py-2 text-pink-500 hover:bg-pink-900/30 transition-colors duration-300"
+          className="py-2 transition-colors duration-300"
         >
           <Linkedin size={24} />
         </Link>
         <Link
           target="_blank"
           href="https://github.com/marcterre"
-          className="py-2 text-pink-500 hover:bg-pink-900/30 transition-colors duration-300"
+          className="py-2 transition-colors duration-300"
         >
           <Github size={24} />
         </Link>
       </div>
+      {/* <ThemeChanger /> */}
     </footer>
   );
 };
 
-export default Footer;
+export { Footer };
