@@ -1,0 +1,18 @@
+[
+  {
+    "id": "497602fe-c100-423a-bffb-1bb7a15e0671",
+    "title": "Daliar Portfolio",
+    "description": "A portfolio website for a character designer and illustrator.",
+    "techStack": ["Next.js", "TailwindCSS", "Typescript"],
+    "url": "https://github.com/marcterre/daliar.github.io",
+    "isCurrentProject": true
+  },
+  {
+    "id": "5441d38e-1059-478c-a717-a0499d426c42",
+    "title": "PocketBuilder",
+    "description": "A web app that allows you to plan your craft projects by creating a material list, adding sketches and manage your projects.",
+    "techStack": ["Styled-Components", "Next.js", "Cloudinary", "Typescript"],
+    "url": "https://github.com/marcterre/capstone-project",
+    "isCurrentProject": false
+  }
+]

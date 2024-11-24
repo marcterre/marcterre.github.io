@@ -2,12 +2,12 @@ import { Project } from "@/types";
 import { FunctionComponent } from "react";
 import { ProjectCard } from ".";
 import ProjectCardsMobile from "./ProjectCardsMobile";
-
+import projects from "@/lib/projects.json";
 type ProjectsProps = {
   projects: Project[];
 };
 
-const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => {
+const Projects = () => {
   const sortedProjects = projects.sort((a, b) => {
     if (a.isCurrentProject) return -1;
     else if (b.isCurrentProject) return 1;
