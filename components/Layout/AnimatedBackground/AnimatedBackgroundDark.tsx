@@ -1,13 +1,13 @@
 "use client";
 import { FunctionComponent, useEffect, useRef } from "react";
 
-type AnimatedBackgroundProps = {
+type AnimatedBackgroundDarkProps = {
   children: React.ReactNode;
 };
 
-const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
-  children,
-}) => {
+const AnimatedBackgroundDark: FunctionComponent<
+  AnimatedBackgroundDarkProps
+> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   let drops: number[] = [];
 
@@ -78,4 +78,4 @@ const AnimatedBackground: FunctionComponent<AnimatedBackgroundProps> = ({
   );
 };
 
-export default AnimatedBackground;
+export default AnimatedBackgroundDark;

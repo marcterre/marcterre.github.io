@@ -22,6 +22,10 @@ const config: Config = {
           "radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%)",
         "cyberpunk-linear":
           "linear-gradient(to bottom, transparent 50%, rgba(255, 0, 255, 0.05) 50%)",
+        "cyberpunk-radial-light":
+          "radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 90%)",
+        "cyberpunk-linear-light":
+          "linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0) 100%)",
       },
       keyframes: {
         fadeIn: {
@@ -39,31 +43,31 @@ const config: Config = {
         glitch: {
           "0%": {
             textShadow:
-              "0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75)",
+              "0.05em 0 0 var(--red), -0.05em -0.025em 0 var(--green), 0.025em 0.05em 0 var(--blue)",
           },
           "14%": {
             textShadow:
-              "0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75)",
+              "0.05em 0 0 var(--red), -0.05em -0.025em 0 var(--green), 0.025em 0.05em 0 var(--blue)",
           },
           "15%": {
             textShadow:
-              "-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75)",
+              "-0.05em -0.025em 0 var(--red), 0.025em 0.025em 0 var(--green), -0.05em -0.05em 0 var(--blue)",
           },
           "49%": {
             textShadow:
-              "-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75)",
+              "-0.05em -0.025em 0 var(--red), 0.025em 0.025em 0 var(--green), -0.05em -0.05em 0 var(--blue)",
           },
           "50%": {
             textShadow:
-              "0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75)",
+              "0.025em 0.05em 0 var(--red), 0.05em 0 0 var(--green), 0 -0.05em 0 var(--blue)",
           },
           "99%": {
             textShadow:
-              "0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75)",
+              "0.025em 0.05em 0 var(--red), 0.05em 0 0 var(--green), 0 -0.05em 0 var(--blue)",
           },
           "100%": {
             textShadow:
-              "-0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75)",
+              "-0.025em 0 0 var(--red), -0.025em -0.025em 0 var(--green), -0.025em -0.05em 0 var(--blue)",
           },
         },
       },

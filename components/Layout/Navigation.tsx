@@ -13,9 +13,9 @@ const Navigation = () => {
           <a
             href={title === "CV" ? "/cv" : "/"}
             key={index}
-            className={`text-lg pb-2 cursor-pointer ${
+            className={`text-lg py-2 cursor-pointer ${
               isCurrentView ? "underline" : ""
-            } hover:underline hover:text-pink-300`}
+            } hover:underline`}
           >
             {title}
           </a>
@@ -25,4 +25,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export { Navigation };
