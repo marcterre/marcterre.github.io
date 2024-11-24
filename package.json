@@ -12,12 +12,8 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.15",
-    "@radix-ui/react-slot": "^1.1.0",
     "autoprefixer": "^10.4.16",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
-    "embla-carousel-react": "^8.5.1",
     "framer-motion": "^11.8.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
@@ -31,9 +27,7 @@
     "react-markdown": "^9.0.1",
     "react-pdf": "^9.1.1",
     "swr": "^2.2.4",
-    "tailwind-merge": "^2.5.4",
-    "tailwindcss": "^3.3.6",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss": "^3.3.6"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

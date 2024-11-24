@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import {
@@ -8,23 +6,36 @@ import {
   Footer,
   Navigation,
 } from "@/components/Layout";
+import { Metadata } from "next";
+import Head from "next/head";
+import { JetBrains_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Marc Terre - Frontend Developer",
   description: "Marc's Portfolio",
+  icons: {
+    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16" },
+    ],
+  },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body
-        className={`${inter.className} font-jetbrains w-screen h-screen text-pink-500 overflow-hidden`}
+        className={`${jetBrainsMono.className} font-jetbrains w-screen h-screen text-pink-500 overflow-hidden`}
       >
         <AnimatedBackground>
           <Header />
