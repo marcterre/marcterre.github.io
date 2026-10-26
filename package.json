@@ -1,42 +1,27 @@
 {
-  "name": "marcterre.github",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@notion-render/client": "^0.0.2",
-    "@notion-render/hljs-plugin": "^0.0.2",
-    "@notionhq/client": "^2.2.15",
-    "autoprefixer": "^10.4.16",
-    "date-fns": "^4.1.0",
-    "framer-motion": "^11.8.0",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^2.5.2",
-    "lucide-react": "^0.460.0",
-    "mongodb": "^6.2.0",
-    "mongoose": "^8.0.0",
-    "next": "^14.2.5",
-    "next-themes": "^0.4.3",
-    "postcss": "^8.4.32",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.1",
-    "react-pdf": "^9.1.1",
-    "swr": "^2.2.4",
-    "tailwindcss": "^3.3.6"
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "styled-components": "^6.6.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "^14.2.5",
-    "typescript": "5.2.2"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
